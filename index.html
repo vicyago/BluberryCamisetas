@@ -8,7 +8,8 @@
     <meta name="author" content="Victor Yago Cury" />
 
     <!-- Link to the external stylesheet -->
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/slider.css" />
 
     <!-- Document title -->
     <title>BlueBerryCamisetas</title>
@@ -22,42 +23,42 @@
         <ul id="mobile-menu" class="menu">
           <li><span id="menu-text">Menu</span></li>
           <li class="header-link">
-            <a href="../html/index.html" class="logo-link"
-              ><img class="imglogo" src="../img/logo.png" alt="BlueBerryLogo"
+            <a href="./html/index.html" class="logo-link"
+              ><img class="imglogo" src="./img/logo.png" alt="BlueBerryLogo"
             /></a>
           </li>
           <li class="header-link">
-            <a href="../html/about.html">Sobre</a>
+            <a href="./html/about.html">Sobre</a>
           </li>
           <li class="header-link">
-            <a href="../html/Products.html">Produtos</a>
+            <a href="./html/Products.html">Produtos</a>
           </li>
           <li class="header-link">
-            <a href="../html/budget.html">Orçamento</a>
+            <a href="./html/budget.html">Orçamento</a>
           </li>
           <li class="header-link">
-            <a href="../html/contact.html">Contato</a>
+            <a href="./html/contact.html">Contato</a>
           </li>
         </ul>
 
         <!-- Desktop menu -->
         <ul id="menu-principal" class="menu">
           <li id="menu-item1" class="menu-item">
-            <a href="../html/index.html" class="logo-link"
-              ><img class="imglogo" src="../img/logo.png" alt="BlueBerryLogo"
+            <a href="./html/index.html" class="logo-link"
+              ><img class="imglogo" src="./img/logo.png" alt="BlueBerryLogo"
             /></a>
           </li>
           <li class="menu-item">
-            <a href="../html/about.html">Sobre</a>
+            <a href="./html/about.html">Sobre</a>
           </li>
           <li class="menu-item">
-            <a href="../html/Products.html">Produtos</a>
+            <a href="./html/Products.html">Produtos</a>
           </li>
           <li class="menu-item">
-            <a href="../html/budget.html">Orçamento</a>
+            <a href="./html/budget.html">Orçamento</a>
           </li>
           <li class="menu-item">
-            <a href="../html/contact.html">Contato</a>
+            <a href="./html/contact.html">Contato</a>
           </li>
         </ul>
       </nav>
@@ -72,40 +73,47 @@
             <div class="grid-item">
               <div class="inner-grid">
                 <div class="left-box">
-                  <h2>Feature 1 - Left Box 70%</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  </p>
+                  <div class="slider-container">
+                    <div class="slider">
+                        <div class="slide"><img src="./img/camisetaslider.png" alt="Image 1"></div>
+                        <div class="slide"><img src="./img/blueberryslider.png" alt="Image 2"></div>
+                        <div class="slide"><img src="./img/camiseta2slider.png" alt="Image 3"></div>
+                        <div class="slide"><img src="./img/blueberry2slider.png" alt="Image 4"></div>
+                        <!-- Add more slides as needed -->
+                    </div>
+                    <button class="prev" onclick="prevSlide()">&#10094;</button>
+                    <button class="next" onclick="nextSlide()">&#10095;</button>
+                </div>
                 </div>
                 <div class="right-box">
-                  <img src="../img/Isolatedbluet-shirt.png" />
+                  <img src="./img/Isolatedbluet-shirt.png" />
                 </div>
               </div>
             </div>
             <div class="grid-item">
               <div class="flex-container wrap">
                 <div>
-                  <img src="../img/camiseta.png" />
+                  <img src="./img/camiseta.png" />
                   <p class="pNamePrdt">Camiseta</p>
                 </div>
                 <div>
-                  <img src="../img/polo.png" />
+                  <img src="./img/polo.png" />
                   <p class="pNamePrdt">Polo</p>
                 </div>
                 <div>
-                  <img src="../img/hoodie.png" />
+                  <img src="./img/hoodie.png" />
                   <p class="pNamePrdt">Agasalho</p>
                 </div>
                 <div>
-                  <img src="../img/abada.png" />
+                  <img src="./img/abada.png" />
                   <p class="pNamePrdt">Abadá</p>
                 </div>
                 <div>
-                  <img src="../img/ecobag.png" />
+                  <img src="./img/ecobag.png" />
                   <p class="pNamePrdt">Ecobag</p>
                 </div>
                 <div>
-                  <img src="../img/mask.png" />
+                  <img src="./img/mask.png" />
                   <p class="pNamePrdt">Máscara</p>
                 </div>
               </div>
@@ -115,12 +123,12 @@
           <div class="grid-item">
             <div class="inner-grid-50">
               <div class="left-box-50">
-                <h2>Feature 3 - Left Box 50%</h2>
-                <p><img src="../img/serigraphy.png" /></p>
+                <h2>SILKSCREEN</h2>
+                <p><img src="./img/serigraphy.png" /></p>
               </div>
               <div class="right-box-50">
-                <h2>Feature 3 - Right Box 50%</h2>
-                <p><img src="../img/embroidery.png" /></p>
+                <h2>BORDADO</h2>
+                <p><img src="./img/embroidery.png" /></p>
               </div>
             </div>
           </div>
@@ -155,7 +163,7 @@
       <!-- Email link and copyright information -->
       <ul class="socials">
         <li>
-          <img src="../img/logoImg.png" alt="BlueBerryCamisetas" />
+          <img src="./img/logoImg.png" alt="BlueBerryCamisetas" />
         </li>
         <li>
           © 2023
@@ -179,6 +187,7 @@
     </footer>
 
     <!-- JavaScript file -->
-    <script src="../js/script.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/slide.js"></script>
   </body>
 </html>
