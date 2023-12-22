@@ -27,7 +27,7 @@
 button {
   position: absolute;
   top: 50%;
-  transform: translateY(-15vh);
+  transform: translateY(-10vh);
   font-size: 3rem;
   background: transparent;
   border: none;
