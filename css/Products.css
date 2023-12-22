@@ -13,15 +13,13 @@
   .modal-content {
     background-color: #fefefe;
     margin: calc(8px + 1.5625vw) auto;
-    padding: 20vh;
-    border: 1px solid #888;
+    padding: 30vh;
     width: 100%;
   }
   
   .close {
-    color: #aaa;
+    color: transparent;
     float: right;
-    font-size: 1.5rem;
   }
   
   .close:hover,

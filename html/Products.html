@@ -23,21 +23,33 @@
         <ul id="mobile-menu" class="menu">
           <li><span id="menu-text">Menu</span></li>
           <li class="header-link">
-            <a href="../index.html" class="logo-link"><img class="imglogo" src="../img/logo.png" alt="BlueBerryLogo" /></a>
+            <a href="../index.html" class="logo-link"
+              ><img class="imglogo" src="../img/logo.png" alt="BlueBerryLogo"
+            /></a>
           </li>
           <li class="header-link"><a href="../html/about.html">Sobre</a></li>
-          <li class="header-link"><a href="../html/Products.html">Produtos</a></li>
-          <li class="header-link"><a href="../html/budget.html">Orçamento</a></li>
-          <li class="header-link"><a href="../html/contact.html">Contato</a></li>
+          <li class="header-link">
+            <a href="../html/Products.html">Produtos</a>
+          </li>
+          <li class="header-link">
+            <a href="../html/budget.html">Orçamento</a>
+          </li>
+          <li class="header-link">
+            <a href="../html/contact.html">Contato</a>
+          </li>
         </ul>
 
         <!-- Desktop menu -->
         <ul id="menu-principal" class="menu">
           <li id="menu-item1" class="menu-item">
-            <a href="../index.html" class="logo-link"><img class="imglogo" src="../img/Logo.png" alt="BlueBerryLogo" /></a>
+            <a href="../index.html" class="logo-link"
+              ><img class="imglogo" src="../img/Logo.png" alt="BlueBerryLogo"
+            /></a>
           </li>
           <li class="menu-item"><a href="../html/about.html">Sobre</a></li>
-          <li class="menu-item"><a href="../html/Products.html">Produtos</a></li>
+          <li class="menu-item">
+            <a href="../html/Products.html">Produtos</a>
+          </li>
           <li class="menu-item"><a href="../html/budget.html">Orçamento</a></li>
           <li class="menu-item"><a href="../html/contact.html">Contato</a></li>
         </ul>
@@ -46,54 +58,106 @@
 
     <!-- Main content section -->
     <main>
+      <br />
 
-      <div class="grid-item">
-
+      <div
+        class="grid-item"
+        style="
+          background-color: #3f84c5;
+          padding: 1rem 0.5rem 1rem 0.5rem;
+          color: #ffffff;
+        "
+      >
         <h2 class="pNamePrdt">PRODUTOS</h2>
-              <br />
+
+        <br />
 
         <div class="flex-container wrap">
-          <div class="product" data-product-name="Camiseta" onclick="toggleModal('camiseta')">
-            <img src="../img/camiseta.png">
+          <div
+            class="product"
+            data-product-name="Camiseta"
+            onclick="toggleModal('camiseta')"
+          >
+            <img src="../img/camiseta.png" />
             <p class="pNamePrdt">Camiseta</p>
           </div>
-          <div class="product" data-product-name="Polo" onclick="toggleModal('polo')">
-            <img src="../img/polo.png">
+          <div
+            class="product"
+            data-product-name="Polo"
+            onclick="toggleModal('polo')"
+          >
+            <img src="../img/polo.png" />
             <p class="pNamePrdt">Polo</p>
           </div>
-          <div class="product" data-product-name="Agasalho" onclick="toggleModal('agasalho')">
-            <img src="../img/hoodie.png">
+          <div
+            class="product"
+            data-product-name="Agasalho"
+            onclick="toggleModal('agasalho')"
+          >
+            <img src="../img/hoodie.png" />
             <p class="pNamePrdt">Agasalho</p>
           </div>
-          <div class="product" data-product-name="Abadá" onclick="toggleModal('abada')">
-            <img src="../img/abada.png">
+          <div
+            class="product"
+            data-product-name="Abadá"
+            onclick="toggleModal('abada')"
+          >
+            <img src="../img/abada.png" />
             <p class="pNamePrdt">Abadá</p>
           </div>
-          <div class="product" data-product-name="Ecobag" onclick="toggleModal('ecobag')">
-            <img src="../img/ecobag.png">
+          <div
+            class="product"
+            data-product-name="Ecobag"
+            onclick="toggleModal('ecobag')"
+          >
+            <img src="../img/ecobag.png" />
             <p class="pNamePrdt">Ecobag</p>
           </div>
-          <div class="product" data-product-name="Máscara" onclick="toggleModal('mascara')">
-            <img src="../img/mask.png">
+          <div
+            class="product"
+            data-product-name="Máscara"
+            onclick="toggleModal('mascara')"
+          >
+            <img src="../img/mask.png" />
             <p class="pNamePrdt">Máscara</p>
           </div>
-          <div class="product" data-product-name="Bordado" onclick="toggleModal('bordado')">
-            <img src="../img/bordado.png">
+          <div
+            class="product"
+            data-product-name="Bordado"
+            onclick="toggleModal('bordado')"
+          >
+            <img src="../img/bordado.png" />
             <p class="pNamePrdt">Bordado</p>
           </div>
-          <div class="product" data-product-name="Confecção" onclick="toggleModal('confeccao')">
-            <img src="../img/confeccao.png">
+          <div
+            class="product"
+            data-product-name="Confecção"
+            onclick="toggleModal('confeccao')"
+          >
+            <img src="../img/confeccao.png" />
             <p class="pNamePrdt">Confecção</p>
           </div>
-          <div class="product" data-product-name="Silkscreen" onclick="toggleModal('silkscreen')">
-            <img src="../img/silkscreen.png">
+          <div
+            class="product"
+            data-product-name="Silkscreen"
+            onclick="toggleModal('silkscreen')"
+          >
+            <img src="../img/silkscreen.png" />
             <p class="pNamePrdt">Silkscreen</p>
           </div>
         </div>
       </div>
-    
+
       <!-- Product Modals -->
-      <div id="camiseta-modal" class="product-modal" onclick="toggleModal('camiseta')">
+
+      <br />
+      <br />
+
+      <div
+        id="camiseta-modal"
+        class="product-modal"
+        onclick="toggleModal('camiseta')"
+      >
         <div class="modal-content">
           <span class="close" onclick="toggleModal('camiseta')">&times;</span>
           <img src="../img/camiseta.png" />
@@ -104,7 +168,7 @@
           <!-- Add more content specific to the Camiseta product -->
         </div>
       </div>
-    
+
       <div id="polo-modal" class="product-modal" onclick="toggleModal('polo')">
         <div class="modal-content">
           <span class="close" onclick="toggleModal('polo')">&times;</span>
@@ -116,8 +180,12 @@
           <!-- Add more content specific to the Polo product -->
         </div>
       </div>
-    
-      <div id="agasalho-modal" class="product-modal" onclick="toggleModal('agasalho')">
+
+      <div
+        id="agasalho-modal"
+        class="product-modal"
+        onclick="toggleModal('agasalho')"
+      >
         <div class="modal-content">
           <span class="close" onclick="toggleModal('agasalho')">&times;</span>
           <img src="../img/hoodie.png" />
@@ -128,8 +196,12 @@
           <!-- Add more content specific to the Agasalho product -->
         </div>
       </div>
-    
-      <div id="abada-modal" class="product-modal" onclick="toggleModal('abada')">
+
+      <div
+        id="abada-modal"
+        class="product-modal"
+        onclick="toggleModal('abada')"
+      >
         <div class="modal-content">
           <span class="close" onclick="toggleModal('abada')">&times;</span>
           <img src="../img/abada.png" />
@@ -140,8 +212,12 @@
           <!-- Add more content specific to the Abadá product -->
         </div>
       </div>
-    
-      <div id="ecobag-modal" class="product-modal" onclick="toggleModal('ecobag')">
+
+      <div
+        id="ecobag-modal"
+        class="product-modal"
+        onclick="toggleModal('ecobag')"
+      >
         <div class="modal-content">
           <span class="close" onclick="toggleModal('ecobag')">&times;</span>
           <img src="../img/ecobag.png" />
@@ -152,8 +228,12 @@
           <!-- Add more content specific to the Ecobag product -->
         </div>
       </div>
-    
-      <div id="mascara-modal" class="product-modal" onclick="toggleModal('mascara')">
+
+      <div
+        id="mascara-modal"
+        class="product-modal"
+        onclick="toggleModal('mascara')"
+      >
         <div class="modal-content">
           <span class="close" onclick="toggleModal('mascara')">&times;</span>
           <img src="../img/mask.png" />
@@ -164,8 +244,12 @@
           <!-- Add more content specific to the Máscara product -->
         </div>
       </div>
-    
-      <div id="bordado-modal" class="product-modal" onclick="toggleModal('bordado')">
+
+      <div
+        id="bordado-modal"
+        class="product-modal"
+        onclick="toggleModal('bordado')"
+      >
         <div class="modal-content">
           <span class="close" onclick="toggleModal('bordado')">&times;</span>
           <img src="../img/bordado.png" />
@@ -176,8 +260,12 @@
           <!-- Add more content specific to the Bordado product -->
         </div>
       </div>
-    
-      <div id="confeccao-modal" class="product-modal" onclick="toggleModal('confeccao')">
+
+      <div
+        id="confeccao-modal"
+        class="product-modal"
+        onclick="toggleModal('confeccao')"
+      >
         <div class="modal-content">
           <span class="close" onclick="toggleModal('confeccao')">&times;</span>
           <img src="../img/confeccao.png" />
@@ -188,8 +276,12 @@
           <!-- Add more content specific to the Confecção product -->
         </div>
       </div>
-    
-      <div id="silkscreen-modal" class="product-modal" onclick="toggleModal('silkscreen')">
+
+      <div
+        id="silkscreen-modal"
+        class="product-modal"
+        onclick="toggleModal('silkscreen')"
+      >
         <div class="modal-content">
           <span class="close" onclick="toggleModal('silkscreen')">&times;</span>
           <img src="../img/silkscreen.png" />
@@ -205,19 +297,16 @@
         <div class="grid-item">
           <div class="inner-grid">
             <div class="left-box">
-              <h2>Feature 1 - Left Box 70%</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
+              <h3>NOSSOS PRODUTOS</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
             <div class="right-box">
-              <img src="../img/Isolatedbluet-shirt.png" />
+              <img src="../img/advantages.png" />
             </div>
           </div>
         </div>
       </div>
-
-      </main>
+    </main>
 
     <!-- Footer section -->
     <footer>
@@ -226,24 +315,14 @@
         <li>
           <img src="../img/logoImg.png" alt="BlueBerryCamisetas" />
         </li>
+        <li>© 2024 BlueBerryCamisetas</li>
         <li>
-          © 2023
-          <br />
-          BlueBerryCamisetas
-        </li>
-        <li>
-          <p style="color: white;">.</p>
-          <a href="mailto:marildablueberry@uol.com.br" target="_blank">marildablueberry@uol.com.br</a
+          <a href="mailto:marildablueberry@uol.com.br" target="_blank"
+            >marildablueberry@uol.com.br</a
           >
         </li>
-        <li>
-          <p style="color: white;">.</p>
-          (19) 3231-2968
-        </li>
-        <li>
-          <p style="color: white;">.</p>
-          Atendimento: 09:00 - 17:00
-        </li>
+        <li>(19) 3231-2968</li>
+        <li>Atendimento: 09:00 - 17:00</li>
       </ul>
     </footer>
 
