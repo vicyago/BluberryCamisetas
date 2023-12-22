@@ -99,7 +99,7 @@ footer {
 
 
 /* Media query for responsiveness on small screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .socials {
     flex-direction: column;
   }
@@ -154,7 +154,7 @@ a:active {
 }
 
 /* Media query for smaller screens (e.g., mobile devices) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   #menu-principal {
     display: none; /* Hide the desktop menu on smaller screens */
   }
@@ -267,7 +267,7 @@ p {
 }
 
 /* Responsive Styles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .inner-grid {
     display: flex;
     flex-direction: column;
@@ -291,7 +291,7 @@ p {
 }
 
 /* Media query for responsiveness on small screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .inner-grid-50 {
     flex-direction: column;
   }
