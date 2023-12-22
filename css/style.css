@@ -93,7 +93,7 @@ main {
 
 .grid-item {
   border: 1px solid #ccc;
-  padding: 0 0 calc(8px + 1.5625vw) 0;
+  padding: 0;
 }
 
 /* Nested Grid Styles */
