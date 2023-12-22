@@ -1,8 +1,7 @@
 /* Product Modals */
 .product-modal {
     display: none;
-    position: fixed;
-    z-index: 1000;
+    position: absolute;
     left: 0;
     top: 0;
     width: 100%;
@@ -14,9 +13,9 @@
   .modal-content {
     background-color: #fefefe;
     margin: calc(8px + 1.5625vw) auto;
-    padding: 50vh;
+    padding: 20vh;
     border: 1px solid #888;
-    width: 80%;
+    width: 100%;
   }
   
   .close {

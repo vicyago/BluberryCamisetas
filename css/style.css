@@ -29,7 +29,7 @@ body {
 header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 110;
   background-color: white;
 }
 
@@ -37,7 +37,7 @@ header {
 footer {
   position: sticky;
   bottom: 0;
-  z-index: 90;
+  z-index: 100;
   background-color: white;
   text-align: center;
 }
