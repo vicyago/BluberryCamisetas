@@ -222,7 +222,7 @@ input:checked + .slider:before {
 .Item {
   font-size: 0.9em;
 }
-@media screen and (max-width: 760px) and (min-width: 340px) {
+@media screen and (max-width: 767px)  {
   .centerFixData {
     font-size: 1.1em;
     text-align: center;
@@ -247,7 +247,7 @@ input:checked + .slider:before {
   .formularioHolder h5,
   span {
     font-size: 0.7em;
-    line-height: 1.7rem;
+    line-height: 1.4rem;
     margin-bottom: 2%;
     margin-top: -15%;
   }
@@ -289,7 +289,7 @@ input:checked + .slider:before {
     display: block;
   }
 }
-@media screen and (min-width: 761px) {
+@media screen and (min-width: 767px) {
   .ulProducts {
     flex-direction: row;
     flex-wrap: wrap;
