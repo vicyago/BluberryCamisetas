@@ -1,35 +1,35 @@
 /* Product Modals */
 .product-modal {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  
-  .modal-content {
-    background-color: #fefefe;
-    margin: calc(8px + 1.5625vw) auto;
-    padding: 30vh;
-    width: 100%;
-  }
-  
-  .close {
-    color: transparent;
-    float: right;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
 
-  /* Media query for responsiveness on small screens */
+.modal-content {
+  background-color: #fefefe;
+  margin: calc(8px + 1.5625vw) auto;
+  padding: 30vh;
+  width: 100%;
+}
+
+.close {
+  color: transparent;
+  float: right;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Media query for responsiveness on small screens */
 @media screen and (max-width: 767px) {
   .modal-content {
     padding: 10vh; /* Adjust the padding for smaller screens */

@@ -197,11 +197,22 @@ p {
 }
 
 .grid-item {
-  transition: font-size 0.3s;
+  transition: background-color 0.3s ease-in-out;
 }
 
+/* Animation for color change on hover */
+@keyframes colorChange {
+  from {
+    color:#3f84c5; /* Initial color */
+  }
+  to {
+    color: black; /* New color on hover */ ;
+  }
+}
+
+  /* Hover effect */
 .grid-item a:hover {
-  font-size: larger; /* Adjust the desired enlarged font size */
+  animation: colorChange 0.3s ease-in-out;
 }
 
 /* Nested Grid Styles */
