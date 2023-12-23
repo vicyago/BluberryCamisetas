@@ -70,6 +70,22 @@ a {
   width: 100%;
 }
 
+/* Link Styles */
+a:visited {
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+  color: rgb(155, 155, 155);
+}
+
+/* Spacer Styles */
+.spacer {
+  height: 50vh;
+}
+
 /* Footer Styles */
 footer {
   position: sticky;
@@ -97,60 +113,48 @@ footer {
   color: #000000;
 }
 
-
 /* Media query for responsiveness on small screens */
 @media screen and (max-width: 767px) {
   .socials {
     flex-direction: column;
   }
 
-/* Link Styles */
-a:visited {
-  text-decoration: none;
-}
+  /* Socials Styles */
+  .socials {
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+  }
 
-a:hover,
-a:active {
-  text-decoration: none;
-  color: rgb(155, 155, 155);
-}
+  .socials li {
+    font-size: 0.9rem;
+    padding: 0.2rem 0 0.2rem 0;
+  }
 
-/* Socials Styles */
-.socials {
-  list-style: none;
-  display: flex;
-  align-items: flex-start;
-  justify-content: start;
-}
+  .socials a {
+    text-decoration: none;
+    color: #000000;
+  }
 
-.socials li {
-  font-size: 0.9rem;
-  padding: 0.2rem 0 0.2rem 0;
-}
+  .socials img {
+    display: none;
+  }
 
-.socials a {
-  text-decoration: none;
-  color: #000000;
-}
+  /* Mobile Menu Styles */
+  .mobile-menu {
+    display: none; /* Hide the mobile menu by default */
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.socials img {
-  display: none;
-}
+  .mobile-menu li {
+    padding: 0.5rem 0; /* Adjust padding for mobile menu items */
+  }
 
-/* Mobile Menu Styles */
-.mobile-menu {
-  display: none; /* Hide the mobile menu by default */
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.mobile-menu li {
-  padding: 0.5rem 0; /* Adjust padding for mobile menu items */
-}
-
-.header-link {
-  display: none; /* Initially hide header links on smaller screens */
-}
+  .header-link {
+    display: none; /* Initially hide header links on smaller screens */
+  }
 }
 
 /* Media query for smaller screens (e.g., mobile devices) */
@@ -203,14 +207,14 @@ p {
 /* Animation for color change on hover */
 @keyframes colorChange {
   from {
-    color:#3f84c5; /* Initial color */
+    color: #3f84c5; /* Initial color */
   }
   to {
-    color: black; /* New color on hover */ ;
+    color: black; /* New color on hover */
   }
 }
 
-  /* Hover effect */
+/* Hover effect */
 .grid-item a:hover {
   animation: colorChange 0.3s ease-in-out;
 }
@@ -259,6 +263,14 @@ p {
   align-items: center;
   text-align: center;
   justify-content: space-between;
+}
+
+/* Product item container styles */
+.flex-container div:hover {
+  transform: scale(
+    1.1
+  ); /* Adjust the scale value for the desired zoom effect */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for the transform property */
 }
 
 .item {
@@ -313,7 +325,6 @@ p {
     width: 45%; /* Adjust the width of each item as needed */
     margin-bottom: 20px;
   }
-
 }
 
 /* Media query for responsiveness on small screens */
