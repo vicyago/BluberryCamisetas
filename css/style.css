@@ -268,14 +268,28 @@ p {
 
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Set a single column layout on smaller screens */
+  }
+
   .inner-grid {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 100%; /* Set full width for inner grid on smaller screens */
+  }
+
+  .right-box {
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px; /* Add margin between boxes on smaller screens */
   }
 
   .right-box img {
     max-width: 100%;
     height: auto;
+  }
+
+  .left-box {
+    text-align: center;
   }
 
   .flex-container {
@@ -288,6 +302,7 @@ p {
     width: 45%; /* Adjust the width of each item as needed */
     margin-bottom: 20px;
   }
+
 }
 
 /* Media query for responsiveness on small screens */
