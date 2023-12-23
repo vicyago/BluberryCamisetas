@@ -4,13 +4,13 @@
 }
 .centerFixData {
   align-self: center;
-  font-size: 2em;
+  font-size: 2rem;
   justify-content: center;
   margin: 2% 5%;
 }
 .aboutText {
-  font-size: 1.5em;
-  line-height: 2em;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .divProducts {
   align-items: center;
@@ -32,7 +32,7 @@
 .ulProducts {
   display: flex;
   flex-direction: column;
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: 300;
 }
 .ulProducts li {
@@ -42,7 +42,7 @@
   align-items: center;
   display: flex;
   flex-direction: row;
-  font-size: 1em;
+  font-size: 1rem;
   gap: 2%;
   justify-content: center;
   line-height: 2rem;
@@ -52,7 +52,7 @@
 .sectionOpcao {
   align-items: center;
   display: grid;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   justify-content: center;
   line-height: 2rem;
   margin: 5%;
@@ -61,7 +61,7 @@
   color: #000000;
   align-items: center;
   display: none;
-  font-size: 1em;
+  font-size: 1rem;
   grid-gap: 5px;
   justify-content: center;
   line-height: 2rem;
@@ -76,7 +76,7 @@
   text-align: center;
 }
 .comentarioHolder {
-  line-height: 2em;
+  line-height: 2rem;
   margin-bottom: 5%;
   margin-top: 0;
   text-align: center;
@@ -88,14 +88,14 @@
   width: 60%;
 }
 .vetorCon {
-  font-size: 0.8em;
-  line-height: 1.8em;
+  font-size: 0.8rem;
+  line-height: 1.8rem;
   text-align: center;
 }
 .formularioHolder {
   display: none;
-  font-size: 1.5em;
-  line-height: 2em;
+  font-size: 1.5rem;
+  line-height: 2rem;
   margin-top: 5%;
   text-align: center;
 }
@@ -150,18 +150,18 @@ input:checked + .slider:before {
   border-radius: 4px;
   box-shadow: 0 1px 6px rgba(80, 80, 80, 0.64);
   color: rgb(0, 0, 0);
-  font-size: 0.8em;
+  font-size: 0.8rem;
   margin-top: 10%;
-  padding: 0.2em 0.4em;
+  padding: 0.2rem 0.4rem;
 }
 .inputSalvar {
   border: 2px solid transparent;
   border-radius: 4px;
   box-shadow: 0 1px 6px rgba(80, 80, 80, 0.64);
   color: rgb(0, 0, 0);
-  font-size: 0.8em;
+  font-size: 0.8rem;
   margin-top: 10%;
-  padding: 0.2em 0.4em;
+  padding: 0.2rem 0.4rem;
 }
 .inputSalvar:hover {
   background-color: #2196f3;
@@ -175,8 +175,8 @@ input:checked + .slider:before {
   border: 2px solid transparent;
   border-radius: 4px;
   box-shadow: 0 1px 6px rgba(80, 80, 80, 0.64);
-  font-size: 1em;
-  padding: 0.25em 0.5em;
+  font-size: 1.4rem;
+  padding: 0.25rem 0.5rem;
 }
 .inputDetalhes {
   background-color: #ffffff;
@@ -185,8 +185,8 @@ input:checked + .slider:before {
   box-shadow: 0 1px 6px rgba(80, 80, 80, 0.64);
   color: rgb(0, 0, 0);
   cursor: pointer;
-  font-size: 1em;
-  padding: 0.25em 0.5em;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
 }
 .mainButton {
   align-items: center;
@@ -196,7 +196,7 @@ input:checked + .slider:before {
   cursor: pointer;
   display: grid;
   font-family: “monaco”, “Consolas”, "Lucida Console", monospace;
-  font-size: 1em;
+  font-size: 1rem;
   justify-content: center;
   margin-left: 35%;
   margin-top: 2%;
@@ -207,7 +207,7 @@ input:checked + .slider:before {
 .mainButton a {
   color: #ffffff;
   display: inline-block;
-  font-size: 1em;
+  font-size: 1rem;
   text-decoration: none;
   text-shadow: 2px 2px 3px rgb(80, 80, 80);
 }
@@ -220,25 +220,25 @@ input:checked + .slider:before {
   grid-template-columns: 90px 90px;
 }
 .Item {
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 @media screen and (max-width: 767px)  {
   .centerFixData {
-    font-size: 1.1em;
+    font-size: 1.1rem;
     text-align: center;
   }
   .sectionOpcao {
-    font-size: 0.9em;
+    font-size: 0.9rem;
     text-align: center;
   }
   .sectionDados {
     display: flex;
     flex-direction: column;
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 2rem;
   }
   .input {
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   .imageHolderForm {
@@ -246,13 +246,13 @@ input:checked + .slider:before {
   }
   .formularioHolder h5,
   span {
-    font-size: 0.7em;
-    line-height: 1.4rem;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
     margin-bottom: 2%;
     margin-top: -15%;
   }
   .mainButton {
-    font-size: 1em;
+    font-size: 1rem;
     margin: 5% 0 5%;
     padding: auto;
     width: 100%;
