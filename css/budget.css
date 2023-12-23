@@ -75,6 +75,9 @@
 .box h2 {
   text-align: center;
 }
+.required{
+  font-size: 1.2rem;
+}
 .comentarioHolder {
   line-height: 2rem;
   margin-bottom: 5%;
@@ -144,30 +147,6 @@ input:checked + .slider:before {
   -ms-transform: translateX(13px);
   transform: translateX(13px);
   -webkit-transform: translateX(13px);
-}
-.inputLimpar {
-  border: 2px solid transparent;
-  border-radius: 4px;
-  box-shadow: 0 1px 6px rgba(80, 80, 80, 0.64);
-  color: rgb(0, 0, 0);
-  font-size: 0.8rem;
-  margin-top: 10%;
-  padding: 0.2rem 0.4rem;
-}
-.inputSalvar {
-  border: 2px solid transparent;
-  border-radius: 4px;
-  box-shadow: 0 1px 6px rgba(80, 80, 80, 0.64);
-  color: rgb(0, 0, 0);
-  font-size: 0.8rem;
-  margin-top: 10%;
-  padding: 0.2rem 0.4rem;
-}
-.inputSalvar:hover {
-  background-color: #2196f3;
-}
-.inputLimpar:hover {
-  background-color: #fcb641;
 }
 .input {
   background-color: #2b9af7;
@@ -244,13 +223,20 @@ input:checked + .slider:before {
   .imageHolderForm {
     display: none;
   }
-  .formularioHolder h5,
-  span {
+  .formularioHolder span {
     font-size: 1.4rem;
     line-height: 1.7rem;
     margin-bottom: 2%;
     margin-top: -15%;
   }
+
+  .formularioHolder h5{
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    margin-bottom: 2%;
+    margin-top: 1rem;
+  }
+ 
   .mainButton {
     font-size: 1rem;
     margin: 5% 0 5%;
@@ -264,10 +250,11 @@ input:checked + .slider:before {
   .slider {
     border-radius: 34px;
     position: absolute;
+    width: auto;
   }
   .switch {
-    height: 12px;
-    margin-top: 2%;
+    height: 1rem;
+    margin-top: 10%;
   }
   #logoProduct {
     width: 136%;
