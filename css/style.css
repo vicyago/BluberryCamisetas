@@ -115,6 +115,11 @@ footer {
 
 /* Media query for responsiveness on small screens */
 @media screen and (max-width: 767px) {
+  /* Spacer Styles */
+  .spacer {
+    display: none;
+  }
+
   .socials {
     flex-direction: column;
   }
