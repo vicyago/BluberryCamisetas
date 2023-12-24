@@ -46,11 +46,11 @@ button {
 /* Media Query for Mobile Screens */
 @media (max-width: 767px) {
   .slider-container {
-    height: 20vh; /* Adjust as needed for mobile screens */
+    height: 25vh; /* Adjust as needed for mobile screens */
   }
 
   .slide img {
-    max-height: 20vh;
+    max-height: 25vh;
   }
 
   /* Media query for smaller screens (adjust as needed) */
