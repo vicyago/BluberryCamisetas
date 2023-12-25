@@ -1,51 +1,138 @@
+/* Style for the shopping cart */
+#cart {
+  /* Position the cart at the center of the screen */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Padding, background color, border, and shadow for visual styling */
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Initially hide the cart */
+  display: none;
+  /* Set full width for responsiveness */
+  width: 100%;
+  /* Center text within the cart */
+  text-align: center;
+}
+
+/* Margin for the customization options within the cart */
+#customization-options {
+  margin-bottom: 20px;
+}
+
+/* Style for the product list container */
+#product-list {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+  justify-content: space-around; /* Distribute items evenly along the main axis */
+}
+
+/* Style for each product label within the product list */
+#product-list label {
+  /* Adjust styles as needed for individual product labels */
+  display: inline-block; /* Display labels in a line */
+  margin: 0 10px 20px; /* Adjust margin for spacing between labels */
+}
+
+/* Style for the basket container */
+#basket {
+  width: 100%; /* Take full width */
+  margin: 20px 0; /* Adjusted margin for spacing */
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+  justify-content: space-around; /* Distribute items evenly along the main axis */
+}
+
+/* Style for the basket list */
+#basket-list {
+  padding: calc(8px + 1.5625vw); /* Padding based on your formula */
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+  justify-content: space-around; /* Distribute items evenly along the main axis */
+}
+
+/* Style for each item in the basket list */
+#basket-list li {
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  flex-basis: calc(50% - 10px);
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+/* Style for the form within the basket */
+#basket-form {
+  /* Center align text within the form */
+  text-align: center;
+}
+
+/* Style for buttons */
+button {
+  /* Background color, text color, and border styling */
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  /* Padding for internal spacing */
+  padding: 10px 20px;
+  /* Center align text within the button */
+  text-align: center;
+  /* Remove default text decoration for buttons */
+  text-decoration: none;
+  /* Display as inline block for consistent spacing */
+  display: inline-block;
+  /* Font size for text within the button */
+  font-size: 16px;
+  /* Margin for spacing around the button */
+  margin: 4px 2px;
+  /* Pointer cursor on hover for interactive feedback */
+  cursor: pointer;
+  /* Rounded corners for visual appeal */
+  border-radius: 4px;
+}
+
+/* Style for button hover state */
+button:hover {
+  /* Darker background color on hover for visual feedback */
+  background-color: #45a049;
+}
+
+/* Responsive styling for screens with a maximum width of 600px */
+@media screen and (max-width: 600px) {
+  /* Adjust styles for product labels and basket items to take full width */
+  #product-list label,
+  #basket-list li {
+    flex-basis: 100%;
+    margin-right: 0; /* Remove right margin for full width on smaller screens */
+  }
+}
+
 /* General Styles */
-.centerFix,
+
+/* Aligns items and justifies content to the center, styles for centerFixData class */
 .centerFixData {
   align-self: center;
   justify-content: center;
-}
-
-.centerFixData {
   font-size: 2rem;
   margin: 2% 5%;
 }
 
+/* Styles for aboutText class */
 .aboutText {
   font-size: 1.5rem;
   line-height: 2rem;
 }
 
-.divProducts {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin-left: 5%;
-  margin-right: 5%;
-  text-align-last: center;
-}
-
-.divProducts img:hover {
-  cursor: pointer;
-  filter: drop-shadow(4px 4px 7px rgba(61, 61, 153, 0.575));
-}
-
-.divProducts img:active {
-  scale: 95%;
-  transform: translate(2px, 2px);
-  transition: 0.3s;
-}
-
-.ulProducts {
-  display: flex;
-  flex-direction: column;
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-.ulProducts li {
-  margin-bottom: 1rem;
-}
-
+/* Styles for sectionDados class */
 .sectionDados {
   align-items: center;
   display: flex;
@@ -57,15 +144,7 @@
   margin: 2%;
 }
 
-.sectionOpcao {
-  align-items: center;
-  display: grid;
-  font-size: 1.5rem;
-  justify-content: center;
-  line-height: 2rem;
-  margin: 5%;
-}
-
+/* Styles for sectionDetalhes class */
 .sectionDetalhes {
   color: #000000;
   align-items: center;
@@ -79,19 +158,14 @@
   margin-top: 0;
 }
 
-.personalizarion {
-  margin-top: 0;
-}
-
 /* Box Styles */
+
+/* Styles for box h2 element */
 .box h2 {
   text-align: center;
 }
 
-.required {
-  font-size: 1.2rem;
-}
-
+/* Styles for comentarioHolder class */
 .comentarioHolder {
   line-height: 2rem;
   margin-bottom: 5%;
@@ -99,6 +173,7 @@
   text-align: center;
 }
 
+/* Styles for comentarioHolder textarea element */
 .comentarioHolder textarea {
   display: block;
   margin-bottom: -10%;
@@ -106,83 +181,26 @@
   width: 60%;
 }
 
-.vetorCon {
-  font-size: 0.8rem;
-  line-height: 1.8rem;
-  text-align: center;
-}
-
+/* Styles for formularioHolder class */
 .formularioHolder {
-  display: none;
   font-size: 1.5rem;
   line-height: 2rem;
   margin-top: 5%;
   text-align: center;
 }
 
-/* Switch Styles */
-.switch {
-  display: inline-block;
-  height: 17px;
-  position: relative;
-  width: 30px;
-}
-
-.switch input {
-  height: 0;
-  opacity: 0;
-  width: 0;
-}
-
-.slider {
-  background-color: #ccc;
-  border-radius: 34px;
-  bottom: 0;
-  cursor: pointer;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: 0.4s;
-  -webkit-transition: 0.4s;
-}
-
-.slider:before {
-  background-color: #ffffff;
-  border-radius: 50%;
-  bottom: 2px;
-  content: "";
-  height: 13px;
-  left: 2px;
-  position: absolute;
-  transition: 0.4s;
-  -webkit-transition: 0.4s;
-  width: 13px;
-}
-
-input:checked + .slider {
-  background-color: #3F84C5;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #3F84C5;
-}
-
-input:checked + .slider:before {
-  -ms-transform: translateX(13px);
-  transform: translateX(13px);
-  -webkit-transform: translateX(13px);
-}
-
 /* Input Styles */
+
+/* Styles for input class */
 .input {
-  background-color: #3F84C5;
+  background-color: #3f84c5;
   color: white;
   box-shadow: 0 1px 6px rgba(80, 80, 80, 0.64);
   font-size: 1.4rem;
   padding: 0.25rem 0.5rem;
 }
 
+/* Styles for inputDetalhes class */
 .inputDetalhes {
   background-color: #ffffff;
   box-shadow: 0 1px 6px rgba(80, 80, 80, 0.64);
@@ -193,6 +211,8 @@ input:checked + .slider:before {
 }
 
 /* Button Styles */
+
+/* Styles for mainButton class */
 .mainButton {
   align-items: center;
   background-color: rgb(0, 75, 160);
@@ -208,6 +228,7 @@ input:checked + .slider:before {
   width: 30%;
 }
 
+/* Styles for mainButton a element */
 .mainButton a {
   color: #ffffff;
   display: inline-block;
@@ -216,33 +237,31 @@ input:checked + .slider:before {
   text-shadow: 2px 2px 3px rgb(80, 80, 80);
 }
 
+/* Styles for mainButton hover state */
 .mainButton:hover {
   background-color: #ffa500;
   box-shadow: 0 1px 6px rgba(80, 80, 80, 0.64);
 }
 
-.capuzBolso {
-  display: grid;
-  grid-template-columns: 90px 90px;
-}
-
-.Item {
-  font-size: 0.9rem;
-}
-
 /* Responsive Styles */
+
+/* Media query for screens with a maximum width of 767px */
 @media screen and (max-width: 767px) {
   /* Adjustments for smaller screens */
+
+  /* Styles for centerFixData class within the media query */
   .centerFixData {
     font-size: 1.1rem;
     text-align: center;
   }
 
+  /* Styles for sectionOpcao class within the media query */
   .sectionOpcao {
     font-size: 0.9rem;
     text-align: center;
   }
 
+  /* Styles for sectionDados class within the media query */
   .sectionDados {
     display: flex;
     flex-direction: column;
@@ -250,16 +269,19 @@ input:checked + .slider:before {
     line-height: 2rem;
   }
 
+  /* Styles for inputx class within the media query */
   .inputx {
     font-size: 1rem;
     padding: 0.25rem 0.5rem;
     width: 7rem;
   }
 
+  /* Styles for imageHolderForm class within the media query */
   .imageHolderForm {
     display: none;
   }
 
+  /* Styles for formularioHolder span element within the media query */
   .formularioHolder span {
     font-size: 1.4rem;
     line-height: 1.7rem;
@@ -267,6 +289,7 @@ input:checked + .slider:before {
     margin-top: -15%;
   }
 
+  /* Styles for formularioHolder h5 element within the media query */
   .formularioHolder h5 {
     font-size: 1.4rem;
     line-height: 1.7rem;
@@ -274,6 +297,7 @@ input:checked + .slider:before {
     margin-top: 1rem;
   }
 
+  /* Styles for mainButton class within the media query */
   .mainButton {
     font-size: 1rem;
     margin: 5% 0 5%;
@@ -281,58 +305,9 @@ input:checked + .slider:before {
     width: 100%;
   }
 
+  /* Styles for comentarioHolder textarea element within the media query */
   .comentarioHolder textarea {
     margin-left: 0%;
     width: 99%;
-  }
-
-  .slider {
-    border-radius: 34px;
-    position: absolute;
-    width: auto;
-  }
-
-  .switch {
-    height: 1rem;
-    margin-top: 10%;
-  }
-
-  #logoProduct {
-    width: 136%;
-  }
-
-  .navProduct {
-    display: block;
-    margin-left: -187%;
-    margin-right: 0;
-    margin-top: -35%;
-    text-align: center;
-  }
-
-  .navRel {
-    display: none;
-  }
-
-  .caixaProdutos {
-    display: none;
-  }
-
-  .caixaProdutosCel {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 767px) {
-  /* Adjustments for larger screens */
-  .ulProducts {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .ulProducts li {
-    flex: 26%;
-    max-width: 26%;
   }
 }

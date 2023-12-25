@@ -1,112 +1,91 @@
-displayDetail();
-imgListen();
-colorInput();
-
-function displayDetail() {
-    let checkInput = document.querySelectorAll(".checkBox");
-    checkInput.forEach(function (btnChk) {
-        btnChk.addEventListener("change", function () {
-            let checkLi = btnChk.closest("li");
-            let checkDiv = checkLi.querySelector(".sectionDetalhes");
-            if (btnChk.checked) {
-                checkDiv.style.display = "grid";
-                makeRequirements(checkDiv, 0);
-            } else {
-                makeRequirements(checkDiv, 1);
-                checkDiv.style.display = "none";
-            }
-            hideDivForm();
-        });
-    });
-}
-function hideDivForm() {
-    let grabDivForm = document.querySelector(".formularioHolder");
-    let showHideDivForm = document.querySelector("#imgsArray");
-    let checkLength = showHideDivForm.querySelectorAll(
-        "input[type=checkbox]:checked"
-    ).length;
-    if (checkLength > 0) {
-        grabDivForm.style.display = "block";
-    } else {
-        grabDivForm.style.display = "none";
-    }
-}
-function imgListen() {
-    let imgProductHolder = document.querySelector(".divProducts");
-    let imgsArray = imgProductHolder.querySelectorAll("img");
-    imgsArray.forEach(function (imgObj) {
-        imgObj.addEventListener("click", function () {
-            imgConfirm(imgObj);
-        });
-    });
-    function imgConfirm(imgObj) {
-        let checkLi = imgObj.closest("li");
-        let nextInput = checkLi.querySelector("input");
-        nextInput.click();
-    }
-}
-function makeRequirements(checkLi, inx){
-    let requiredFields = checkLi.querySelectorAll(".required");
-    if(inx==0){
-        requiredFields.forEach(function(item, index){
-                item.required = true;
-            }
-        )
-    }
-    else{
-           requiredFields.forEach(function(item, index){
-                item.required = false;
-            }
-        )
-    }
-
-}
-function colorInput() {
-    let textColorInputs = document.querySelectorAll("input[name=colorName]");
-    let selectColorInput = document.querySelectorAll(".corPeca");
-
-    function checkColorInput(currentInput, inputChoose) {
-        let colorSelector = currentInput.parentElement.querySelector(".corPeca");
-        let colorTextInput = currentInput.parentElement.querySelector(
-            "input[name=colorName]"
-        );
-        let disabledInput;
-        let chooserArray = [
-            [true, "not-allowed", 0.5],
-            [false, "pointer", 1],
-        ];
-        if (inputChoose === "text") {
-            disabledInput = colorSelector;
-        } else {
-            disabledInput = colorTextInput;
-        }
-
-        if (currentInput.value !== "") {
-            disableInput(0);
-        } else {
-            disableInput(1);
-        }
-        function disableInput(arrayInx) {
-            disabledInput.disabled = chooserArray[arrayInx][0];
-            disabledInput.style.cursor = chooserArray[arrayInx][1];
-            disabledInput.style.opacity = chooserArray[arrayInx][2];
-        }
-    }
-    function addListeners() {
-        textColorInputs.forEach(function (currentInput) {
-            currentInput.oninput = function () {
-                checkColorInput(currentInput, "text");
-            };
-        });
-        selectColorInput.forEach(function (currentInput) {
-            currentInput.onchange = function () {
-                checkColorInput(currentInput, "select");
-            };
-        });
-    }
-
-    addListeners();
-
-}
-
-window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='text'){e.preventDefault();return false;}}},true);
+// Function to open the shopping cart with customization options for a selected product
+function openCart(product, imageUrl) {
+    // Display the shopping cart
+    document.getElementById('cart').style.display = 'block';
+  
+    // Populate customization options in the cart
+    document.getElementById('customization-options').innerHTML = `
+      <p>Product: ${product}</p>
+      <img src="${imageUrl}" alt="${product}" style="max-width: 100px; height: auto; margin-bottom: 10px;">
+      <label>Malha da Peça:
+        <input type="text" name="material">
+      </label>
+      <br>
+      <label>Cor da Peça:
+        <input type="text" name="color">
+      </label>
+      <br>
+      <label>Tipo de Gola:
+        <input type="text" name="collar">
+      </label>
+      <br>
+      <label>Quantidade de Peças:
+        <input type="number" name="quantity" value="1" min="1">
+      </label>
+      <br>
+      <label>Tamanho da Peça (Max ${getMaxQuantity()}):
+        <input type="text" name="size">
+        <br>
+        <label>Quantidade por Tamanho:
+          <input type="number" name="sizeQuantity" value="1" min="1">
+        </label>
+      </label>
+      <br>
+      <label>Personalização (Bordado/Silkscreen):
+        <select name="personalization">
+          <option value="bordado">Bordado</option>
+          <option value="silkscreen">Silkscreen</option>
+        </select>
+      </label>
+      <br>
+      <label>Anexar Arquivo:
+        <input type="file" name="attachment">
+      </label>
+    `;
+  }
+  
+  // Function to get the maximum quantity allowed for a product
+  function getMaxQuantity() {
+    // You can define the maximum quantity dynamically based on your requirements
+    return 10;
+  }
+  
+  // Function to close the shopping cart
+  function closeCart() {
+    document.getElementById('cart').style.display = 'none';
+  }
+  
+  // Function to save customization options to the basket
+  function saveCustomization() {
+    // Get customization options from the cart
+    const customizationOptions = document.getElementById('customization-options').innerHTML;
+  
+    // Create a list item to represent the customized product
+    const listItem = document.createElement('li');
+    listItem.innerHTML = customizationOptions;
+  
+    // Add the customized product to the basket list
+    document.getElementById('basket-list').appendChild(listItem);
+  
+    // Close the shopping cart after saving customization
+    closeCart();
+  }
+  
+  // Function to clear customization options in the shopping cart
+  function clearCustomization() {
+    // Clear customization options
+    document.getElementById('customization-options').innerHTML = '';
+  
+    // Close the shopping cart after clearing customization
+    closeCart();
+  }
+  
+  // Function to submit the form (placeholder, actual implementation is commented)
+  function submitForm() {
+    // Get the content of the basket
+    const basketContent = document.getElementById('basket-list').innerHTML;
+  
+    // Log the basket content (you can implement logic to submit the form to the server here)
+    console.log(basketContent);
+    // Implement the logic to submit the form to the server (e.g., via AJAX or traditional form submission).
+  }

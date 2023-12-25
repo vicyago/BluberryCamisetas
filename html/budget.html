@@ -3,7 +3,7 @@
   <head>
     <!-- Metadata for the document -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Web Site Psychology Terapy" />
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta name="author" content="Victor Yago Cury" />
@@ -24,21 +24,33 @@
         <ul id="mobile-menu" class="menu">
           <li><span id="menu-text">Menu</span></li>
           <li class="header-link">
-            <a href="../index.html" class="logo-link"><img class="imglogo" src="../img/Logo.png" alt="BlueBerryLogo" /></a>
+            <a href="../index.html" class="logo-link"
+              ><img class="imglogo" src="../img/Logo.png" alt="BlueBerryLogo"
+            /></a>
           </li>
           <li class="header-link"><a href="../html/about.html">Sobre</a></li>
-          <li class="header-link"><a href="../html/Products.html">Produtos</a></li>
-          <li class="header-link"><a href="../html/budget.html">Orçamento</a></li>
-          <li class="header-link"><a href="../html/contact.html">Contato</a></li>
+          <li class="header-link">
+            <a href="../html/Products.html">Produtos</a>
+          </li>
+          <li class="header-link">
+            <a href="../html/budget.html">Orçamento</a>
+          </li>
+          <li class="header-link">
+            <a href="../html/contact.html">Contato</a>
+          </li>
         </ul>
 
         <!-- Desktop menu -->
         <ul id="menu-principal" class="menu">
           <li id="menu-item1" class="menu-item">
-            <a href="../index.html" class="logo-link"><img class="imglogo" src="../img/Logo.png" alt="BlueBerryLogo" /></a>
+            <a href="../index.html" class="logo-link"
+              ><img class="imglogo" src="../img/Logo.png" alt="BlueBerryLogo"
+            /></a>
           </li>
           <li class="menu-item"><a href="../html/about.html">Sobre</a></li>
-          <li class="menu-item"><a href="../html/Products.html">Produtos</a></li>
+          <li class="menu-item">
+            <a href="../html/Products.html">Produtos</a>
+          </li>
           <li class="menu-item"><a href="../html/budget.html">Orçamento</a></li>
           <li class="menu-item"><a href="../html/contact.html">Contato</a></li>
         </ul>
@@ -46,712 +58,242 @@
     </header>
 
     <main>
+      <!-- Main content section -->
+
+      <div class="box">
+        <!-- Box for product selection -->
+        <h2 class="centerFixData">Escolha os produtos</h2>
+      </div>
+
+      <!-- Shopping cart container -->
+      <div id="cart">
+        <!-- Title for the customization section -->
+        <h2>Customize Your Item</h2>
+        <!-- Container for customization options -->
+        <div id="customization-options"></div>
+        <!-- Buttons for interaction with customization -->
+        <button onclick="saveCustomization()">Save</button>
+        <button onclick="clearCustomization()">Clear</button>
+        <button onclick="closeCart()">Close</button>
+      </div>
+
+      <!-- Product list container -->
+      <div id="product-list">
+        <!-- Individual product checkboxes with images -->
+        <!-- Product 1 -->
+        <label class="input">
+          <input
+            type="checkbox"
+            onclick="openCart('Product 1', 'product1.jpg')"
+          />
+          <img src="../img/camiseta.png" alt="Product 1" /> Camiseta
+        </label>
+        <!-- Product 2 -->
+        <label class="input">
+          <input
+            type="checkbox"
+            onclick="openCart('Product 2', 'product2.jpg')"
+          />
+          <img src="../img/polo.png" alt="Product 2" /> Polo
+        </label>
+        <!-- Product 3 -->
+        <label class="input">
+          <input
+            type="checkbox"
+            onclick="openCart('Product 3', 'product3.jpg')"
+          />
+          <img src="../img/hoodie.png" alt="Product 3" /> Agasalho
+        </label>
+        <!-- Product 4 -->
+        <label class="input">
+          <input
+            type="checkbox"
+            onclick="openCart('Product 4', 'product4.jpg')"
+          />
+          <img src="../img/abada.png" alt="Product 4" /> Abadá
+        </label>
+        <!-- Product 5 -->
+        <label class="input">
+          <input
+            type="checkbox"
+            onclick="openCart('Product 5', 'product5.jpg')"
+          />
+          <img src="../img/ecobag.png" alt="Product 5" /> Ecobag
+        </label>
+        <!-- Product 6 -->
+        <label class="input">
+          <input
+            type="checkbox"
+            onclick="openCart('Product 6', 'product6.jpg')"
+          />
+          <img src="../img/mask.png" alt="Product 6" /> Mascara
+        </label>
+      </div>
+
+      <div class="">
+        <!-- Basket container -->
+        <div id="basket">
+          <!-- Title for the basket section -->
+          <h2>Basket</h2>
+          <!-- List to display selected items and their customization options -->
+          <ul id="basket-list"></ul>
+        </div>
+      </div>
+
+      <!-- Form for submitting the order -->
+      <form id="basket-form">
+        <!-- Button to submit the form -->
+        <button type="button" onclick="submitForm()">Submit Order</button>
+      </form>
 
       <section class="boxes">
-        <div class="container">
-            <div class="box">
-                <h2 class="centerFixData">Seus Dados</h2>
-                <h4 style="text-align: center; color: rgb(194, 20, 20);">
-                    Campos com * são de preenchimento obrigatório!
-                </h4>
-                <form action="../email.php" method="POST">
-                    <div class="sectionDados">
-                        <div class="dadosBasis">
-                            <div><label class="#">◼ Seu Nome ✏️*</label></div>
-                            <div>
-                                <input name="Nome" class="input" id="Nome" size="18" maxlength="30" type="text"
-                                    required />
-                            </div>
-                        </div>
-                        <div class="dadosBasis">
-                            <div>
-                                <label class="#">◼ E-mail ✉️*</label>
-                            </div>
-                            <div>
-                                <input name="Email" class="input" id="Email" size="18" maxlength="30" type="text"
-                                    required />
-                            </div>
-                        </div>
-                        <div class="dadosBasis">
-                            <div>
-                                <label class="#">◼ Celular 📞</label>
-                            </div>
-                            <div>
-                                <input name="dddCel" class="input" id="DDD" size="1" maxlength="3" type="text" />
-                                <input name="Telefone" class="input" id="Telefone" size="10" maxlength="12"
-                                    type="text" />
-                            </div>
-                        </div>
-                        <div class="dadosBasis">
-                            <div>
-                                <label class="#">◼ Telefone ☎️</label>
-                            </div>
-                            <div>
-                                <input name="dddTelefone" class="input" id="DDD2" size="1" maxlength="3" type="text" />
-                                <input name="Telefone2" class="input" id="Telefone2" size="10" maxlength="12"
-                                    type="text" />
-                            </div>
-                        </div>
-                    </div>
-                    <h2 class="centerFixData">Escolha os produtos</h2>
-                    <div class="divProducts">
-                        <ul id="imgsArray" class="ulProducts">
-                            <li>
-                                <img src="../img/camiseta.png" />
-                                <p class="input inputx">
-                                    Camiseta<br />
-                                    <label class="switch"><input id="camiseta" class="input checkBox"
-                                            type="checkbox" /><span class="slider"></span></label>
-                                </p>
-                                <div id="divCamiseta" class="sectionDetalhes">
-                                    <input name="Camiseta" type="hidden" value="produto">
-                                    <br />
-                                    <b>Detalhes da Peça</b>
-                                    <label class="#">Malha da Peça:</label>
-                                    <select name="Material_da_peca_camiseta" class="inputDetalhes required"
-                                        id="Material_da_peça_camiseta">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="Algodão Cardada">Algodão Cardada</option>
-                                        <option value="Algodão Penteada">Algodão Penteada</option>
-                                        <option value="Malha Fria PV">Poliviscose - PV</option>
-                                        <option value="Dry Fit Poliéster">Dry fit Poliéster</option>
-                                        <option value="Dry Fit Poliamida">Dry fit Poliamida</option>
-                                    </select>
-                                    <label for="camisetaColor" class="colorName">Cor da Peça: </label>
-                                    <input type="text" name="colorName" id="camisetaColor" class="required" min="30"
-                                        size="20" maxlength="30" placeholder="Digitar Cor" />
-                                    <label class="#"></label>
-                                    <select name="Cor_da_peca_camiseta" class="inputDetalhes corPeca required"
-                                        id="Cor_da_peca_camiseta">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="#fff">Branco</option>
-                                        <option value="#808080">Cinza</option>
-                                        <option value="#d3d3d3">Cinza Claro</option>
-                                        <option value="#aaa9ad">Prata</option>
-                                        <option value="#000">Preto</option>
-                                        <option value="#78866b">Verde Militar</option>
-                                        <option value="#013220">Verde Escuro</option>
-                                        <option value="#008000">Verde</option>
-                                        <option value="#90ee90">Verde Claro</option>
-                                        <option value="#A020F0">Roxo</option>
-                                        <option value="#0B0B45">Azul Marinho</option>
-                                        <option value="#00008b">Azul Escuro</option>
-                                        <option value="#0000ff">Azul</option>
-                                        <option value="#add8e6 ">Azul Claro</option>
-                                        <option value="#0FF">Cyan</option>
-                                        <option value="#FF00FF">Magenta</option>
-                                        <option value="#ffcbdb">Rosa</option>
-                                        <option value="#f00">Vermelho</option>
-                                        <option value="#fa8072">Salmon</option>
-                                        <option value="#ffa500">Laranja</option>
-                                        <option value="#cd7f32">Bronze</option>
-                                        <option value="#ff0">Amarelo</option>
-                                        <option value="#daa520">Dourado</option>
-                                        <option value="#ffdb58">Mostarda</option>
-                                        <option value="#f5f5dc">Bege</option>
-                                    </select>
-                                    <label class="#">Tipo de Gola:</label>
-                                    <select name="Tipo_de_gola_camiseta" class="inputDetalhes required"
-                                        id="Tipo_de_gola_camiseta">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="Redonda">Redonda (Careca)</option>
-                                        <option value="V">Gola "V"</option>
-                                    </select>
-                                    <label for="amount_camiseta" class="#">Quantidade:</label>
-                                    <input type="number" id="amount_camiseta" name="numeroPecasCamiseta" min="30"
-                                        size="20" maxlength="30" placeholder="30 peças" class="required" />
-                                    <label class="#">Tamanho da Peça:</label>
-                                    <select name="tamanho_da_peca_camiseta" class="inputDetalhes required"
-                                        id="tamanho_da_peca_camiseta">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="PP">PP</option>
-                                        <option value="P">P</option>
-                                        <option value="M">M</option>
-                                        <option value="G">G</option>
-                                        <option value="GG">GG</option>
-                                    </select>
-                                    <br />
-                                    <label class="custom"><b>Personalização</b></label>
-                                    <label class="#">Bordado:</label>
-                                    <select name="bordadoCamiseta" class="inputDetalhes required"
-                                        id="PersonalizacaoBordado_camiseta">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="SIM">Sim</option>
-                                        <option value="NÃO">Não</option>
-                                    </select>
-                                    <label class="#">Silkscreen:</label>
-                                    <select name="silkCamiseta" class="inputDetalhes required"
-                                        id="personalizacaoSilk_camiseta">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="SIM">Sim</option>
-                                        <option value="NÃO">Não</option>
-                                    </select>
-                                    <div class="vetorCon">
-                                        <h3>
-                                            Anexar os Arquivos <br />
-                                            Caso disponível
-                                        </h3>
-                                        <label class="#">📎</label>
-                                        <a href="#" class="#" title="Choose date">Escolher Arquivos</a>
-                                        <label class="#">Vetorizada:<br /></label>
-                                        <input name="vectorCamiseta" class="#" value="SIM" type="radio" />
-                                        Sim
-                                        <input name="vectorCamiseta" class="#" value="NÃO" type="radio" />
-                                        Não
-                                        <input name="vectorCamiseta" class="#" value="NÃO SEI" type="radio" />
-                                        Não Sei
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="../img/polo.png" />
-                                <p class="input inputx">
-                                    Polo<br />
-                                    <label class="switch"><input id="golaPolo" class="input checkBox"
-                                            type="checkbox" /><span class="slider"></span></label>
-                                </p>
-                                <div id="divPolo" class="sectionDetalhes">
-                                    <input name="Polo" type="hidden" value="produto">
-                                    <br />
-                                    <b>Detalhes da Peça</b>
-                                    <label class="#">Malha da Peça:</label>
-                                    <select name="Material_da_peca_polo" class="inputDetalhes required"
-                                        id="Material_da_peça_polo">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="Algodão Cardada">Algodão Cardada</option>
-                                        <option value="Algodão Penteada">Algodão Penteada</option>
-                                        <option value="Malha Fria PV">Poliviscose - PV</option>
-                                        <option value="Piquet">Piquet</option>
-                                    </select>
-                                    <label for="poloColor" class="colorName">Cor da Peça: </label>
-                                    <input type="text" name="colorName" id="poloColor" min="30" size="20" maxlength="30"
-                                        placeholder="Digitar Cor" class="required" />
-                                    <label class="#"></label>
-                                    <select name="Cor_da_peca_polo" class="inputDetalhes corPeca required"
-                                        id="Cor_da_peca_polo">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="#fff">Branco</option>
-                                        <option value="#808080">Cinza</option>
-                                        <option value="#d3d3d3">Cinza Claro</option>
-                                        <option value="#aaa9ad">Prata</option>
-                                        <option value="#000">Preto</option>
-                                        <option value="#78866b">Verde Militar</option>
-                                        <option value="#013220">Verde Escuro</option>
-                                        <option value="#008000">Verde</option>
-                                        <option value="#90ee90">Verde Claro</option>
-                                        <option value="#A020F0">Roxo</option>
-                                        <option value="#0B0B45">Azul Marinho</option>
-                                        <option value="#00008b">Azul Escuro</option>
-                                        <option value="#0000ff">Azul</option>
-                                        <option value="#add8e6 ">Azul Claro</option>
-                                        <option value="#0FF">Cyan</option>
-                                        <option value="#FF00FF">Magenta</option>
-                                        <option value="#ffcbdb">Rosa</option>
-                                        <option value="#f00">Vermelho</option>
-                                        <option value="#fa8072">Salmon</option>
-                                        <option value="#ffa500">Laranja</option>
-                                        <option value="#cd7f32">Bronze</option>
-                                        <option value="#ff0">Amarelo</option>
-                                        <option value="#daa520">Dourado</option>
-                                        <option value="#ffdb58">Mostarda</option>
-                                        <option value="#f5f5dc">Beige</option>
-                                    </select>
-                                    <label class="#">Tipo de Gola:</label>
-                                    <select name="Tipo_de_gola_polo" class="inputDetalhes required"
-                                        id="Tipo_de_gola_polo">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="Redonda">Gola Polo</option>
-                                    </select>
-                                    <label for="amount_polo" class="#">Quantidade:</label>
-                                    <input type="number" id="amount_polo" name="numeroPecasPolo" min="30" size="20"
-                                        maxlength="30" placeholder="30 peças" class="required" />
-                                    <label class="#">Tamanho da Peça:</label>
-                                    <select name="tamanho_da_peca_polo" class="inputDetalhes required"
-                                        id="tamanho_da_peca_polo">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="PP">PP</option>
-                                        <option value="P">P</option>
-                                        <option value="M">M</option>
-                                        <option value="G">G</option>
-                                        <option value="GG">GG</option>
-                                    </select>
-                                    <br />
-                                    <label class="custom"><b>Personalização</b></label>
-                                    <label class="#">Bordado:</label>
-                                    <select name="bordadoPolo" class="inputDetalhes required"
-                                        id="PersonalizacaoBordado_polo">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="SIM">Sim</option>
-                                        <option value="NÃO">Não</option>
-                                    </select>
-                                    <label class="#">Silkscreen:</label>
-                                    <select name="silkPolo" class="inputDetalhes required" id="personalizacaoSilk_polo">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="SIM">Sim</option>
-                                        <option value="NÃO">Não</option>
-                                    </select>
-                                    <div class="vetorCon">
-                                        <h3>
-                                            Anexar os Arquivos <br />
-                                            Caso disponível
-                                        </h3>
-                                        <label class="#">📎</label>
-                                        <a href="#" class="#" title="Choose date">Escolher Arquivos</a>
-                                        <label class="#">Vetorizada:<br /></label>
-                                        <input name="vectorPolo" class="#" value="SIM" type="radio" />
-                                        Sim
-                                        <input name="vectorPolo" class="#" value="NÃO" type="radio" />
-                                        Não
-                                        <input name="vectorPolo" class="#" value="NÃOSEI" type="radio" />
-                                        Não Sei
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="../img/hoodie.png" />
-                                <p class="input inputx">
-                                    Agasalho<br />
-                                    <label class="switch"><input id="agasalho" class="input checkBox"
-                                            type="checkbox" /><span class="slider"></span></label>
-                                </p>
-                                <div id="divAgasalho" class="sectionDetalhes">
-                                    <input name="Agasalho" type="hidden" value="produto">
-                                    <br />
-                                    <b>Detalhes da Peça</b>
-                                    <label class="#">Malha da Peça:</label>
-                                    <select name="Material_da_peca_agasalho" class="inputDetalhes required"
-                                        id="Material_da_peça_agasalho">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="Moleton Flanelado">Moleton Flanelado</option>
-                                    </select>
-                                    <label for="agasalhoColor" class="colorName">Cor da Peça: </label>
-                                    <input type="text" name="colorName" id="agasalhoColor" min="30" size="20"
-                                        maxlength="30" placeholder="Digitar Cor" class="required" />
-                                    <label class="#"></label>
-                                    <select name="Cor_da_peca_agasalho" class="inputDetalhes corPeca required"
-                                        id="Cor_da_peca_agasalho">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="#fff">Branco</option>
-                                        <option value="#808080">Cinza</option>
-                                        <option value="#d3d3d3">Cinza Claro</option>
-                                        <option value="#aaa9ad">Prata</option>
-                                        <option value="#000">Preto</option>
-                                        <option value="#78866b">Verde Militar</option>
-                                        <option value="#013220">Verde Escuro</option>
-                                        <option value="#008000">Verde</option>
-                                        <option value="#90ee90">Verde Claro</option>
-                                        <option value="#A020F0">Roxo</option>
-                                        <option value="#0B0B45">Azul Marinho</option>
-                                        <option value="#00008b">Azul Escuro</option>
-                                        <option value="#0000ff">Azul</option>
-                                        <option value="#add8e6 ">Azul Claro</option>
-                                        <option value="#0FF">Cyan</option>
-                                        <option value="#FF00FF">Magenta</option>
-                                        <option value="#ffcbdb">Rosa</option>
-                                        <option value="#f00">Vermelho</option>
-                                        <option value="#fa8072">Salmon</option>
-                                        <option value="#ffa500">Laranja</option>
-                                        <option value="#cd7f32">Bronze</option>
-                                        <option value="#ff0">Amarelo</option>
-                                        <option value="#daa520">Dourado</option>
-                                        <option value="#ffdb58">Mostarda</option>
-                                        <option value="#f5f5dc">Beige</option>
-                                    </select>
-                                    <label class="#">Capuz: / Bolso:</label>
-                                    <div class="capuzBolso">
-                                        <div class="Item">
-                                            <label class="#"></label>
-                                            <select name="capuzAgasalho" class="inputDetalhes required"
-                                                id="capuzAgasalho" style="border-color: #2196f3;">
-                                                <option value="" selected="selected">Capuz</option>
-                                                <option value="Com Capuz">Com</option>
-                                                <option value="Sem Capuz">Sem</option>
-                                            </select>
-                                        </div>
-                                        <div class="Item">
-                                            <label class="#"></label>
-                                            <select name="bolsoAgasalho" class="inputDetalhes required"
-                                                id="bolsoAgasalho" style="border-color: #fcb641;">
-                                                <option value="" selected="selected">Bolso</option>
-                                                <option value="Com Bolso">Com</option>
-                                                <option value="Sem Bolso">Sem</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <label for="amount_agasalho" class="#">Quantidade:</label>
-                                    <input type="number" id="amount_agasalho" name="numeroPecasAgasalho" min="30"
-                                        size="20" maxlength="30" placeholder="30 peças" class="required" />
-                                    <label class="#">Tamanho da Peça:</label>
-                                    <select name="tamanho_da_peca_agasalho" class="inputDetalhes required"
-                                        id="tamanho_da_peca_agasalho">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="PP">PP</option>
-                                        <option value="P">P</option>
-                                        <option value="M">M</option>
-                                        <option value="G">G</option>
-                                        <option value="GG">GG</option>
-                                    </select>
-                                    <br />
-                                    <label class="custom"><b>Personalização</b></label>
-                                    <label class="#">Bordado:</label>
-                                    <select name="bordadoAgasalho" class="inputDetalhes required"
-                                        id="PersonalizacaoBordado_agasalho">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="SIM">Sim</option>
-                                        <option value="NÃO">Não</option>
-                                    </select>
-                                    <label class="#">Silkscreen:</label>
-                                    <select name="silkAgasalho" class="inputDetalhes required"
-                                        id="personalizacaoSilk_agasalho">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="SIM">Sim</option>
-                                        <option value="NÃO">Não</option>
-                                    </select>
-                                    <div class="vetorCon">
-                                        <h3>
-                                            Anexar os Arquivos <br />
-                                            Caso disponível
-                                        </h3>
-                                        <label class="#">📎</label>
-                                        <a href="#" class="#" title="Choose date">Escolher Arquivos</a>
-                                        <label class="#">Vetorizada:<br /></label>
-                                        <input name="vectorAgasalho" class="#" value="SIM" type="radio" />
-                                        Sim
-                                        <input name="vectorAgasalho" class="#" value="NÃO" type="radio" />
-                                        Não
-                                        <input name="vectorAgasalho" class="#" value="NÃOSEI" type="radio" />
-                                        Não Sei
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="../img/abada.png" />
-                                <p class="input inputx">
-                                    Abadá<br />
-                                    <label class="switch"> <input id="abada" class="input checkBox"
-                                            type="checkbox" /><span class="slider"></span></label>
-                                </p>
-                                <div id="divAbada" class="sectionDetalhes">
-                                    <input name="Abada" type="hidden" value="produto">
-                                    <br />
-                                    <b>Detalhes da Peça</b>
-                                    <label class="#">Malha da Peça:</label>
-                                    <select name="Material_da_peca_abada" class="inputDetalhes required"
-                                        id="Material_da_peça_abada">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="Algodão Cardada">Algodão Cardada</option>
-                                        <option value="Algodão Penteada">Algodão Penteada</option>
-                                        <option value="Malha Fria PV">Poliviscose - PV</option>
-                                        <option value="Dry Fit Polister">Dry fit Poliéster</option>
-                                        <option value="Dry Fit Poliamida">Dry fit Poliamida</option>
-                                    </select>
-                                    <label for="abadaColor" class="colorName">Cor da Peça: </label>
-                                    <input type="text" name="colorName" id="abadaColor" min="30" size="20"
-                                        maxlength="30" placeholder="Digitar Cor" class="required" />
-                                    <label class="#"></label>
-                                    <select name="Cor_da_peca_abada" class="inputDetalhes corPeca required"
-                                        id="Cor_da_peca_abada">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="#fff">Branco</option>
-                                        <option value="#808080">Cinza</option>
-                                        <option value="#d3d3d3">Cinza Claro</option>
-                                        <option value="#aaa9ad">Prata</option>
-                                        <option value="#000">Preto</option>
-                                        <option value="#78866b">Verde Militar</option>
-                                        <option value="#013220">Verde Escuro</option>
-                                        <option value="#008000">Verde</option>
-                                        <option value="#90ee90">Verde Claro</option>
-                                        <option value="#A020F0">Roxo</option>
-                                        <option value="#0B0B45">Azul Marinho</option>
-                                        <option value="#00008b">Azul Escuro</option>
-                                        <option value="#0000ff">Azul</option>
-                                        <option value="#add8e6 ">Azul Claro</option>
-                                        <option value="#0FF">Cyan</option>
-                                        <option value="#FF00FF">Magenta</option>
-                                        <option value="#ffcbdb">Rosa</option>
-                                        <option value="#f00">Vermelho</option>
-                                        <option value="#fa8072">Salmon</option>
-                                        <option value="#ffa500">Laranja</option>
-                                        <option value="#cd7f32">Bronze</option>
-                                        <option value="#ff0">Amarelo</option>
-                                        <option value="#daa520">Dourado</option>
-                                        <option value="#ffdb58">Mostarda</option>
-                                        <option value="#f5f5dc">Beige</option>
-                                    </select>
-                                    <label class="#">Abertura Lateral:</label>
-                                    <select name="Tipo_de_abertura_abada" class="inputDetalhes required"
-                                        id="Tipo_de_abertura_abada">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="Fechado">Fechado</option>
-                                        <option value="Elastico">Elastico</option>
-                                    </select>
-                                    <label for="amount_abada" class="#">Quantidade:</label>
-                                    <input type="number" id="amount_abada" name="numeroPecasAbada" min="30" size="20"
-                                        maxlength="30" placeholder="30 peças" class="required" />
-                                    <label class="#">Tamanho da Peça:</label>
-                                    <select name="tamanho_da_peca_abada" class="inputDetalhes required"
-                                        id="tamanho_da_peca_abada">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="PP">PP</option>
-                                        <option value="P">P</option>
-                                        <option value="M">M</option>
-                                        <option value="G">G</option>
-                                        <option value="GG">GG</option>
-                                    </select>
-                                    <br />
-                                    <label class="custom"><b>Personalização</b></label>
-                                    <label class="#">Bordado:</label>
-                                    <select name="bordadoAbada" class="inputDetalhes required"
-                                        id="PersonalizacaoBordado_abada">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="SIM">Sim</option>
-                                        <option value="NÃO">Não</option>
-                                    </select>
-                                    <label class="#">Silkscreen:</label>
-                                    <select name="silkAbada" class="inputDetalhes required"
-                                        id="personalizacaoSilk_abada">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="SIM">Sim</option>
-                                        <option value="NÃO">Não</option>
-                                    </select>
-                                    <div class="vetorCon">
-                                        <h3>
-                                            Anexar os Arquivos <br />
-                                            Caso disponível
-                                        </h3>
-                                        <label class="#">📎</label>
-                                        <a href="#" class="#" title="Choose date">Escolher Arquivos</a>
-                                        <label class="#">Vetorizada:<br /></label>
-                                        <input name="vectorAbada" class="#" value="SIM" type="radio" />
-                                        Sim
-                                        <input name="vectorAbada" class="#" value="NÃO" type="radio" />
-                                        Não
-                                        <input name="vectorAbada" class="#" value="NÃOSEI" type="radio" />
-                                        Não Sei
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="../img/ecobag.png" />
-                                <p class="input inputx">
-                                    Ecobag<br />
-                                    <label class="switch"> <input id="ecobag" class="input checkBox"
-                                            type="checkbox" /><span class="slider"></span></label>
-                                </p>
-                                <div id="divEcobag" class="sectionDetalhes">
-                                    <input name="Ecobag" type="hidden" value="produto">
-                                    <br />
-                                    <b>Detalhes da Peça</b>
-                                    <label class="#">Malha da Peça:</label>
-                                    <select name="Material_da_peca_ecobag" class="inputDetalhes required"
-                                        id="Material_da_peça_ecobag">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="Algodão Cru">Algodão Cru</option>
-                                    </select>
-                                    <label for="ecobagColor" class="colorName">Cor da Peça: </label>
-                                    <input type="text" name="colorName" id="ecobagColor" min="30" size="20"
-                                        maxlength="30" placeholder="Algodao Cru" class="required" />
-                                    <label class="#"></label>
-                                    <select name="Cor_da_peca_ecobag" class="inputDetalhes corPeca required"
-                                        id="Cor_da_peca_ecobag">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="#C7A975">Algodão Cru</option>
-                                    </select>
-                                    <label class="#">Tipo de Alça:</label>
-                                    <select name="Tipo_de_alça_ecobag" class="inputDetalhes required"
-                                        id="Tipo_de_alça_ecobag">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="Redonda">Algodao Trançado</option>
-                                    </select>
-                                    <label for="amount_ecobag" class="#">Quantidade:</label>
-                                    <input type="number" id="amount_ecobag" name="numeroPecasEcobag" min="30" size="20"
-                                        maxlength="30" placeholder="30 peças" class="required" />
-                                    <label class="#">Tamanho da Peça:</label>
-                                    <select name="tamanho_da_peca_ecobag" class="inputDetalhes required"
-                                        id="tamanho_da_peca_ecobag">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="Unico">Unico</option>
-                                    </select>
-                                    <br />
-                                    <label class="custom"><b>Personalização</b></label>
-                                    <label class="#">Bordado:</label>
-                                    <select name="bordadoEcobag" class="inputDetalhes required"
-                                        id="PersonalizacaoBordado_ecobag">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="SIM">Sim</option>
-                                        <option value="NÃO">Não</option>
-                                    </select>
-                                    <label class="#">Silkscreen:</label>
-                                    <select name="silkEcobag" class="inputDetalhes required"
-                                        id="personalizacaoSilk_ecobag">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="SIM">Sim</option>
-                                        <option value="NÃO">Não</option>
-                                    </select>
-                                    <div class="vetorCon">
-                                        <h3>
-                                            Anexar os Arquivos <br />
-                                            Caso disponível
-                                        </h3>
-                                        <label class="#">📎</label>
-                                        <a href="#" class="#" title="Choose date">Escolher Arquivos</a>
-                                        <label class="#">Vetorizada:<br /></label>
-                                        <input name="vectorEcobag" class="#" value="SIM" type="radio" />
-                                        Sim
-                                        <input name="vectorEcobag" class="#" value="NÃO" type="radio" />
-                                        Não
-                                        <input name="vectorEcobag" class="#" value="NÃOSEI" type="radio" />
-                                        Não Sei
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="../img/mask.png" />
-                                <p class="input inputx">
-                                    Máscara<br />
-                                    <label class="switch"> <input id="mask" class="input checkBox"
-                                            type="checkbox" /><span class="slider"></span></label>
-                                </p>
-                                <div id="divMask" class="sectionDetalhes">
-                                    <input name="Mascara" type="hidden" value="produto">
-                                    <br />
-                                    <b>Detalhes da Peça</b>
-                                    <label class="#">Malha da Peça:</label>
-                                    <select name="Material_da_pecaMask" class="inputDetalhes required"
-                                        id="Material_da_peçaMask">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="Algodão Cardada">Algodão Cardada</option>
-                                        <option value="Algodão Penteada">Algodão Penteada</option>
-                                        <option value="Malha Fria PV">Poliviscose - PV</option>
-                                    </select>
-                                    <label for="maskColor" class="colorName">Cor da Peça: </label>
-                                    <input type="text" name="colorName" id="maskColor" min="30" size="20" maxlength="30"
-                                        placeholder="Digitar Cor" class="required" />
-                                    <label class="#"></label>
-                                    <select name="Cor_da_pecaMask" class="inputDetalhes corPeca required"
-                                        id="Cor_da_pecaMask">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="#fff">Branco</option>
-                                        <option value="#808080">Cinza</option>
-                                        <option value="#d3d3d3">Cinza Claro</option>
-                                        <option value="#aaa9ad">Prata</option>
-                                        <option value="#000">Preto</option>
-                                        <option value="#78866b">Verde Militar</option>
-                                        <option value="#013220">Verde Escuro</option>
-                                        <option value="#008000">Verde</option>
-                                        <option value="#90ee90">Verde Claro</option>
-                                        <option value="#A020F0">Roxo</option>
-                                        <option value="#0B0B45">Azul Marinho</option>
-                                        <option value="#00008b">Azul Escuro</option>
-                                        <option value="#0000ff">Azul</option>
-                                        <option value="#add8e6 ">Azul Claro</option>
-                                        <option value="#0FF">Cyan</option>
-                                        <option value="#FF00FF">Magenta</option>
-                                        <option value="#ffcbdb">Rosa</option>
-                                        <option value="#f00">Vermelho</option>
-                                        <option value="#fa8072">Salmon</option>
-                                        <option value="#ffa500">Laranja</option>
-                                        <option value="#cd7f32">Bronze</option>
-                                        <option value="#ff0">Amarelo</option>
-                                        <option value="#daa520">Dourado</option>
-                                        <option value="#ffdb58">Mostarda</option>
-                                        <option value="#f5f5dc">Beige</option>
-                                    </select>
-                                    <label class="#">Tipo de Forma:</label>
-                                    <select name="Tipo_de_formaMask" class="inputDetalhes required"
-                                        id="Tipo_de_formaMask">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="Bico de Pato">Bico de Pato</option>
-                                    </select>
-                                    <label for="amountMask" class="#">Quantidade:</label>
-                                    <input type="number" id="amountMask" name="numeroPecasMask" min="30" size="20"
-                                        maxlength="30" placeholder="30 peças" class="required" />
-                                    <label class="#">Tamanho da Peça:</label>
-                                    <select name="tamanho_da_peca_mascara" class="inputDetalhes required"
-                                        id="tamanho_da_peca_mascara">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="Unico">Unico</option>
-                                    </select>
-                                    <br />
-                                    <label class="custom"><b>Personalização</b></label>
-                                    <label class="#">Bordado:</label>
-                                    <select name="bordadoMascara" class="inputDetalhes required"
-                                        id="PersonalizacaoBordadoMask">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="SIM">Sim</option>
-                                        <option value="NÃO">Não</option>
-                                    </select>
-                                    <label class="#">Silkscreen:</label>
-                                    <select name="silkMascara" class="inputDetalhes required"
-                                        id="personalizacaoSilkMask">
-                                        <option value="" selected="selected">▫️ Selecionar ▫️</option>
-                                        <option value="SIM">Sim</option>
-                                        <option value="NÃO">Não</option>
-                                    </select>
-                                    <div class="vetorCon">
-                                        <h3>
-                                            Anexar os Arquivos <br />
-                                            Caso disponível
-                                        </h3>
-                                        <label class="#">📎</label>
-                                        <a href="#" class="#" title="Choose date">Escolher Arquivos</a>
-                                        <label class="#">Vetorizada:<br /></label>
-                                        <input name="vectorMascara" class="#" value="SIM" type="radio" />
-                                        Sim
-                                        <input name="vectorMascara" class="#" value="NÃO" type="radio" />
-                                        Não
-                                        <input name="vectorMascara" class="#" value="NÃOSEI" type="radio" />
-                                        Não Sei
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="formularioHolder">
-                        <div class="comentarioHolder">
-                            <h3>Observações 💬 Dúvidas ❓</h3>
-                            <textarea name="Comentario" cols="50" rows="5" class="inputDetalhes" id="Comentario"
-                                style="resize: vertical;"></textarea>
-                            <label class="#">
-                                <input name="tituloMensagem" id="tituloMensagem" value="Formulário de Orçamento"
-                                    type="hidden" />
-                                &nbsp;
-                            </label>
-                        </div>
-                        <br />                    
-                        <button type="submit" style="color: rgb(255, 255, 255);" class="mainButton"
-                            id="mainButton">Enviar
-                            Formulário</button>
-                    </div>
-                </form>
+          <!-- Box for user data -->
+          <div class="box">
+            <!-- Title for user data section -->
+            <h2 class="centerFixData">Seus Dados</h2>
+            <!-- Information about mandatory fields -->
+            <h4 style="text-align: center; color: rgb(194, 20, 20)">
+              Campos com * são de preenchimento obrigatório!
+            </h4>
+            <!-- Form for user data, action attribute specifies the PHP file to handle the form -->
+            <form>
+              <!-- Section for user details -->
+              <div class="sectionDados">
+                <!-- Individual data fields -->
+                <div class="dadosBasis">
+                  <div><label class="#">◼ Seu Nome ✏️*</label></div>
+                  <div>
+                    <input
+                      name="Nome"
+                      class="input"
+                      id="Nome"
+                      size="18"
+                      maxlength="30"
+                      type="text"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="dadosBasis">
+                  <div>
+                    <label class="#">◼ E-mail ✉️*</label>
+                  </div>
+                  <div>
+                    <input
+                      name="Email"
+                      class="input"
+                      id="Email"
+                      size="18"
+                      maxlength="30"
+                      type="text"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="dadosBasis">
+                  <div>
+                    <label class="#">◼ Celular 📞</label>
+                  </div>
+                  <div>
+                    <input
+                      name="dddCel"
+                      class="input"
+                      id="DDD"
+                      size="1"
+                      maxlength="3"
+                      type="text"
+                    />
+                    <input
+                      name="Telefone"
+                      class="input"
+                      id="Telefone"
+                      size="10"
+                      maxlength="12"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <div class="dadosBasis">
+                  <div>
+                    <label class="#">◼ Telefone ☎️</label>
+                  </div>
+                  <div>
+                    <input
+                      name="dddTelefone"
+                      class="input"
+                      id="DDD2"
+                      size="1"
+                      maxlength="3"
+                      type="text"
+                    />
+                    <input
+                      name="Telefone2"
+                      class="input"
+                      id="Telefone2"
+                      size="10"
+                      maxlength="12"
+                      type="text"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section for additional comments -->
+              <div class="formularioHolder">
+                <div class="comentarioHolder">
+                  <h3>Observações 💬 Dúvidas ❓</h3>
+                  <textarea
+                    name="Comentario"
+                    cols="50"
+                    rows="5"
+                    class="inputDetalhes"
+                    id="Comentario"
+                    style="resize: vertical"
+                  ></textarea>
+                  <label class="#">
+                    <input
+                      name="tituloMensagem"
+                      id="tituloMensagem"
+                      value="Formulário de Orçamento"
+                      type="hidden"
+                    />
+                    &nbsp;
+                  </label>
+                </div>
                 <br />
-            </div>
-        </div>
-    </section>
-
+                <!-- Button to submit the form -->
+                <button
+                  type="submit"
+                  style="color: rgb(255, 255, 255)"
+                  class="mainButton"
+                  id="mainButton"
+                >
+                  Enviar Formulário
+                </button>
+                <br />
+              </div>
+            </form>
+          </div>
+      </section>
     </main>
-
-     <!-- Spacer to Fill Remaining Space -->
-  <div class="spacer"></div>
 
     <!-- Footer section -->
     <footer>
-        <!-- Email link and copyright information -->
-        <ul class="socials">
-          <li>
-            <img src="../img/logoImg.png" alt="BlueBerryCamisetas" />
-          </li>
-          <li>
-            © 2024 BlueBerryCamisetas
-          </li>
-          <li>
-            <a href="mailto:marildablueberry@uol.com.br" target="_blank"
-              >marildablueberry@uol.com.br</a>
-          </li>
-          <li>(19) 3231-2968</li>
-          <li>Atendimento: 09:00 - 17:00</li>
-        </ul>
-      </footer>
+      <!-- Email link and copyright information -->
+      <ul class="socials">
+        <li>
+          <img src="../img/logoImg.png" alt="BlueBerryCamisetas" />
+        </li>
+        <li>© 2024 BlueBerryCamisetas</li>
+        <li>
+          <a href="mailto:marildablueberry@uol.com.br" target="_blank"
+            >marildablueberry@uol.com.br</a
+          >
+        </li>
+        <li>(19) 3231-2968</li>
+        <li>Atendimento: 09:00 - 17:00</li>
+      </ul>
+    </footer>
 
     <!-- JavaScript file -->
     <script src="../js/script.js"></script>
