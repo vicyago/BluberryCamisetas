@@ -252,6 +252,7 @@ p {
 .inner-grid-33 {
   display: flex;
   text-align: center;
+  gap: calc(8px + 1.5625vw);
 }
 
 .left-box-33,

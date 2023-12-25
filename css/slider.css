@@ -36,11 +36,11 @@ button {
 }
 
 .prev {
-  left: 2%;
+  left: 1rem;
 }
 
 .next {
-  right: 2%;
+  right: 1rem;
 }
 
 /* Media Query for Mobile Screens */
