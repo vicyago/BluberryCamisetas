@@ -32,6 +32,6 @@
 /* Media query for responsiveness on small screens */
 @media screen and (max-width: 767px) {
   .modal-content {
-    padding: 10vh; /* Adjust the padding for smaller screens */
+    padding: 5vh; /* Adjust the padding for smaller screens */
   }
 }
