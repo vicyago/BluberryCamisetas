@@ -47,6 +47,7 @@ button {
 @media (max-width: 767px) {
   .slider-container {
     height: 25vh; /* Adjust as needed for mobile screens */
+    margin-bottom: -10vh;
   }
 
   .slide img {
