@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Metadata for the document -->
+    <!-- Metadata for character set, viewport, description, keywords, and author -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Web Site Psychology Terapy" />
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta name="author" content="Victor Yago Cury" />
-
-    <!-- Link to the external stylesheet -->
+    <!-- External style sheets -->
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/budget.css" />
-
-    <!-- Document title -->
+    <!-- External budget sheet -->
+    <script src="../js/budget.js"></script>
+    <!-- Title of the web page -->
     <title>Textos</title>
   </head>
   <body>
-    <!-- Header section -->
+    <!-- Header section with navigation -->
     <header>
-      <!-- Navigation menu -->
       <nav>
         <!-- Mobile menu -->
         <ul id="mobile-menu" class="menu">
@@ -39,8 +38,7 @@
             <a href="../html/contact.html">Contato</a>
           </li>
         </ul>
-
-        <!-- Desktop menu -->
+        <!-- Main menu -->
         <ul id="menu-principal" class="menu">
           <li id="menu-item1" class="menu-item">
             <a href="../index.html" class="logo-link"
@@ -56,230 +54,215 @@
         </ul>
       </nav>
     </header>
-
+    <!-- Main content section -->
     <main>
-      <!-- Main content section -->
-
+      <!-- Section for product selection -->
       <div class="box">
-        <!-- Box for product selection -->
         <h2 class="centerFixData">Escolha os produtos</h2>
       </div>
-
-      <!-- Shopping cart container -->
+      <!-- Shopping cart section -->
       <div id="cart">
-        <!-- Title for the customization section -->
-        <h2>Customize Your Item</h2>
-        <!-- Container for customization options -->
+        <h2>Customização do item</h2>
         <div id="customization-options"></div>
-        <!-- Buttons for interaction with customization -->
         <button onclick="saveCustomization()">Save</button>
         <button onclick="clearCustomization()">Clear</button>
         <button onclick="closeCart()">Close</button>
       </div>
-
-      <!-- Product list container -->
+      <!-- Product list with checkboxes -->
       <div id="product-list">
-        <!-- Individual product checkboxes with images -->
-        <!-- Product 1 -->
         <label class="input">
           <input
             type="checkbox"
-            onclick="openCart('Product 1', 'product1.jpg')"
+            onclick="openCart('camiseta', '../img/camiseta.png')"
           />
-          <img src="../img/camiseta.png" alt="Product 1" /> Camiseta
+          <img src="../img/camiseta.png" alt="camiseta" /> Camiseta
         </label>
-        <!-- Product 2 -->
         <label class="input">
           <input
             type="checkbox"
-            onclick="openCart('Product 2', 'product2.jpg')"
+            onclick="openCart('polo', '../img/polo.png')"
           />
-          <img src="../img/polo.png" alt="Product 2" /> Polo
+          <img src="../img/polo.png" alt="polo" /> Polo
         </label>
-        <!-- Product 3 -->
         <label class="input">
           <input
             type="checkbox"
-            onclick="openCart('Product 3', 'product3.jpg')"
+            onclick="openCart('agasalho', '../img/hoodie.png')"
           />
-          <img src="../img/hoodie.png" alt="Product 3" /> Agasalho
+          <img src="../img/hoodie.png" alt="Agasalho" /> Agasalho
         </label>
-        <!-- Product 4 -->
         <label class="input">
           <input
             type="checkbox"
-            onclick="openCart('Product 4', 'product4.jpg')"
+            onclick="openCart('abada', '../img/abada.png')"
           />
-          <img src="../img/abada.png" alt="Product 4" /> Abadá
+          <img src="../img/abada.png" alt="Abadá" /> Abadá
         </label>
-        <!-- Product 5 -->
         <label class="input">
           <input
             type="checkbox"
-            onclick="openCart('Product 5', 'product5.jpg')"
+            onclick="openCart('ecobag', '../img/ecobag.png')"
           />
-          <img src="../img/ecobag.png" alt="Product 5" /> Ecobag
+          <img src="../img/ecobag.png" alt="Ecobag" /> Ecobag
         </label>
-        <!-- Product 6 -->
         <label class="input">
           <input
             type="checkbox"
-            onclick="openCart('Product 6', 'product6.jpg')"
+            onclick="openCart('mascara', '../img/mask.png')"
           />
-          <img src="../img/mask.png" alt="Product 6" /> Mascara
+          <img src="../img/mask.png" alt="Máscara" /> Máscara
         </label>
       </div>
-
+      <!-- Basket section to display selected items -->
       <div class="">
-        <!-- Basket container -->
+        <div id="product-info" style="display: none"></div>
         <div id="basket">
-          <!-- Title for the basket section -->
-          <h2>Basket</h2>
-          <!-- List to display selected items and their customization options -->
+          <h2>Carrinho <img src="../img/carrinho.png" alt="Carrinho" /></h2>
           <ul id="basket-list"></ul>
         </div>
       </div>
-
       <!-- Form for submitting the order -->
-      <form id="basket-form">
-        <!-- Button to submit the form -->
-        <button type="button" onclick="submitForm()">Submit Order</button>
-      </form>
-
-      <section class="boxes">
-          <!-- Box for user data -->
+      <form id="basket-form" action="submit_form.php" method="post">
+        <!-- User Information Section -->
+        <section class="boxes">
           <div class="box">
-            <!-- Title for user data section -->
             <h2 class="centerFixData">Seus Dados</h2>
-            <!-- Information about mandatory fields -->
             <h4 style="text-align: center; color: rgb(194, 20, 20)">
               Campos com * são de preenchimento obrigatório!
             </h4>
-            <!-- Form for user data, action attribute specifies the PHP file to handle the form -->
-            <form>
-              <!-- Section for user details -->
-              <div class="sectionDados">
-                <!-- Individual data fields -->
-                <div class="dadosBasis">
-                  <div><label class="#">◼ Seu Nome ✏️*</label></div>
-                  <div>
-                    <input
-                      name="Nome"
-                      class="input"
-                      id="Nome"
-                      size="18"
-                      maxlength="30"
-                      type="text"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="dadosBasis">
-                  <div>
-                    <label class="#">◼ E-mail ✉️*</label>
-                  </div>
-                  <div>
-                    <input
-                      name="Email"
-                      class="input"
-                      id="Email"
-                      size="18"
-                      maxlength="30"
-                      type="text"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="dadosBasis">
-                  <div>
-                    <label class="#">◼ Celular 📞</label>
-                  </div>
-                  <div>
-                    <input
-                      name="dddCel"
-                      class="input"
-                      id="DDD"
-                      size="1"
-                      maxlength="3"
-                      type="text"
-                    />
-                    <input
-                      name="Telefone"
-                      class="input"
-                      id="Telefone"
-                      size="10"
-                      maxlength="12"
-                      type="text"
-                    />
-                  </div>
-                </div>
-                <div class="dadosBasis">
-                  <div>
-                    <label class="#">◼ Telefone ☎️</label>
-                  </div>
-                  <div>
-                    <input
-                      name="dddTelefone"
-                      class="input"
-                      id="DDD2"
-                      size="1"
-                      maxlength="3"
-                      type="text"
-                    />
-                    <input
-                      name="Telefone2"
-                      class="input"
-                      id="Telefone2"
-                      size="10"
-                      maxlength="12"
-                      type="text"
-                    />
-                  </div>
+            <div class="sectionDados">
+              <!-- User Details Fields -->
+              <!-- Repeat similar fields for other user details -->
+              <div class="dadosBasis">
+                <div><label class="#">◼ Seu Nome ✏️*</label></div>
+                <div>
+                  <input
+                    name="Nome"
+                    class="input"
+                    id="Nome"
+                    size="18"
+                    maxlength="30"
+                    type="text"
+                    required
+                  />
                 </div>
               </div>
+              <div class="dadosBasis">
+                <div>
+                  <label class="#">◼ E-mail ✉️*</label>
+                </div>
+                <div>
+                  <input
+                    name="Email"
+                    class="input"
+                    id="Email"
+                    size="18"
+                    maxlength="30"
+                    type="text"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="dadosBasis">
+                <div>
+                  <label class="#">◼ Celular 📞</label>
+                </div>
+                <div>
+                  <input
+                    name="dddCel"
+                    class="input"
+                    id="DDD"
+                    size="1"
+                    maxlength="3"
+                    type="text"
+                  />
+                  <input
+                    name="Telefone"
+                    class="input"
+                    id="Telefone"
+                    size="10"
+                    maxlength="12"
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div class="dadosBasis">
+                <div>
+                  <label class="#">◼ Telefone ☎️</label>
+                </div>
+                <div>
+                  <input
+                    name="dddTelefone"
+                    class="input"
+                    id="DDD2"
+                    size="1"
+                    maxlength="3"
+                    type="text"
+                  />
+                  <input
+                    name="Telefone2"
+                    class="input"
+                    id="Telefone2"
+                    size="10"
+                    maxlength="12"
+                    type="text"
+                  />
+                </div>
+              </div>
+            </div>
 
-              <!-- Section for additional comments -->
-              <div class="formularioHolder">
-                <div class="comentarioHolder">
-                  <h3>Observações 💬 Dúvidas ❓</h3>
-                  <textarea
-                    name="Comentario"
-                    cols="50"
-                    rows="5"
-                    class="inputDetalhes"
-                    id="Comentario"
-                    style="resize: vertical"
-                  ></textarea>
-                  <label class="#">
-                    <input
-                      name="tituloMensagem"
-                      id="tituloMensagem"
-                      value="Formulário de Orçamento"
-                      type="hidden"
-                    />
-                    &nbsp;
-                  </label>
-                </div>
-                <br />
-                <!-- Button to submit the form -->
-                <button
-                  type="submit"
-                  style="color: rgb(255, 255, 255)"
-                  class="mainButton"
-                  id="mainButton"
-                >
-                  Enviar Formulário
-                </button>
-                <br />
+            <div class="formularioHolder">
+              <div class="comentarioHolder">
+                <h3>Observações 💬 Dúvidas ❓</h3>
+                <!-- Textarea for additional comments -->
+                <textarea
+                  name="Comentario"
+                  cols="50"
+                  rows="5"
+                  class="inputDetalhes"
+                  id="Comentario"
+                  style="resize: vertical"
+                ></textarea>
+                <!-- Hidden input for form title -->
+                <label class="#">
+                  <input
+                    name="tituloMensagem"
+                    id="tituloMensagem"
+                    value="Formulário de Orçamento"
+                    type="hidden"
+                  />
+                  &nbsp;
+                </label>
               </div>
-            </form>
+            </div>
           </div>
-      </section>
+        </section>
+
+        <!-- Hidden input for basket content -->
+        <input type="hidden" name="basketContent" id="hiddenBasketContent" />
+
+        <!-- Submit button for the form -->
+        <button
+          type="button"
+          class="mainButton"
+          id="mainButton"
+          onclick="simulateFormSubmission()"
+        >
+          Enviar Formulário
+        </button>
+        <br />
+      </form>
+
+      <!-- Display saved content -->
+      <div id="saved-content"></div>
     </main>
+
+    <!-- Display thanks container -->
+    <div id="thanks-container" style="text-align: center;"></div>
 
     <!-- Footer section -->
     <footer>
-      <!-- Email link and copyright information -->
+      <!-- Social links and contact information -->
       <ul class="socials">
         <li>
           <img src="../img/logoImg.png" alt="BlueBerryCamisetas" />
@@ -295,8 +278,61 @@
       </ul>
     </footer>
 
-    <!-- JavaScript file -->
+    <!-- Script for form submission simulation -->
+    <script>
+      function simulateFormSubmission() {
+        // Retrieve the basket content and set it in the hidden input
+        const basketContent = document.getElementById("basket-list").innerHTML;
+        document.getElementById("hiddenBasketContent").value = basketContent;
+
+        // Retrieve user information
+        const userName = document.getElementById("Nome").value;
+        const userEmail = document.getElementById("Email").value;
+        const userComments = document.getElementById("Comentario").value;
+
+        // Create the content with Brazilian Portuguese labels
+        const content = `
+        <div style="border: 0.2rem solid #3f84c5; padding: 1rem; margin: 1rem 0; text-align: center;">
+            <h2 style="margin-bottom: 1rem;">Conteúdo Salvo</h2>
+            ${basketContent}
+            <p style="margin-top: 1rem; margin-bottom: 1rem;">Informações do Usuário:</p>
+            <ul style="justify-content: space-between; overflow: hidden;">
+                <li style="margin-bottom: 1rem;">Nome: ${userName}</li>
+                <li style="margin-bottom: 1rem;">Email: ${userEmail}</li>
+                <li style="margin-bottom: 1rem;">Celular: ${
+                  document.getElementById("DDD").value
+                } ${document.getElementById("Telefone").value}</li>
+                <li>Telefone: ${document.getElementById("DDD2").value} ${
+          document.getElementById("Telefone2").value
+        }</li>
+            </ul>
+            <ul style="overflow: hidden;" >
+                <li>Comentários: ${userComments}</li>
+            </ul>
+        </div>
+    `;
+
+        // Display the saved content
+        const savedContent = document.getElementById("saved-content");
+        savedContent.innerHTML = content;
+
+        // Show a thank you message
+        const thankYouMessage = document.createElement("p");
+        thankYouMessage.innerText =
+          "Obrigado pelo seu pedido! Recebemos suas informações com sucesso.";
+        thankYouMessage.style.color = "#3f84c5"; // You can adjust the styling as needed
+
+        // Append the thank you message to a specific container
+        const thanksContainer = document.getElementById("thanks-container");
+        thanksContainer.innerHTML = ""; // Clear existing content in the container
+        thanksContainer.appendChild(thankYouMessage);
+
+        // Optionally, you can reset the form fields after submission
+        document.getElementById("basket-form").reset();
+      }
+    </script>
+
+    <!-- JavaScript files -->
     <script src="../js/script.js"></script>
-    <script src="../js/budget.js"></script>
   </body>
 </html>

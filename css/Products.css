@@ -34,4 +34,8 @@
   .modal-content {
     padding: 5vh; /* Adjust the padding for smaller screens */
   }
+  .description {
+    font-size: 1rem; /* Adjust the font size as needed */
+    line-height: 1.5; /* Adjust the line height for better readability */
+  }
 }
