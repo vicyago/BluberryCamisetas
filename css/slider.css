@@ -54,11 +54,8 @@ button {
     max-height: 25vh;
   }
 
-  /* Media query for smaller screens (adjust as needed) */
-  @media screen and (max-width: 768px) {
-    button {
-      font-size: 2rem; /* Adjust the font size for smaller screens */
-      transform: translateY(-5vh); /* Adjust the translateY value as needed */
-    }
+  button {
+    font-size: 2rem; /* Adjust the font size for smaller screens */
+    transform: translateY(-5vh); /* Adjust the translateY value as needed */
   }
 }

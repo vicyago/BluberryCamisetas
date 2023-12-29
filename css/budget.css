@@ -58,13 +58,6 @@
   background-color: #ff6666; /* Darker red on hover for visual feedback */
 }
 
-/* Responsive styling for customization options */
-@media screen and (max-width: 767px) {
-  #customization-options label {
-    width: 100%;
-  }
-}
-
 /* Style for the product list container */
 #product-list {
   text-align: center;
@@ -140,14 +133,6 @@
   flex-direction: column;
 }
 
-/* Responsive styling for smaller screens */
-@media only screen and (max-width: 600px) {
-  #basket-list li {
-    flex-basis: calc(100% - 10px);
-    margin-right: 0;
-  }
-}
-
 /* Style for buttons */
 button {
   background-color: #4caf50;
@@ -165,15 +150,6 @@ button {
 /* Style for button hover state */
 button:hover {
   background-color: #45a049;
-}
-
-/* Responsive styling for screens with a maximum width of 600px */
-@media screen and (max-width: 600px) {
-  #product-list label,
-  #basket-list li {
-    flex-basis: 100%;
-    margin-right: 0;
-  }
 }
 
 /* General Styles */
@@ -287,11 +263,30 @@ button:hover {
 /* Responsive Styles */
 
 @media screen and (max-width: 767px) {
+  /* Responsive styling for customization options */
+  #customization-options label {
+    width: 100%;
+  }
+
+  /* Responsive styling for basket options */
+  #basket-list li {
+    flex-basis: calc(100% - 10px);
+    margin-right: 0;
+  }
+
+  #product-list label,
+  #basket-list li {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+
+  /* Responsive styling for text alignment */
   .centerFixData {
     font-size: 1.1rem;
     text-align: center;
   }
 
+  /* Responsive styling basic layout of form content */
   .sectionOpcao {
     font-size: 0.9rem;
     text-align: center;
