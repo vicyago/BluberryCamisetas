@@ -318,6 +318,7 @@ p {
 
   .left-box {
     text-align: center;
+    padding: 0 0.2rem 0 0.2rem;
   }
 
   .flex-container {
