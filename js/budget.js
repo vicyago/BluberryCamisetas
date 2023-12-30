@@ -1,7 +1,13 @@
-// Function to open the shopping cart with customization options for a selected product
 function openCart(product, imageUrl) {
-  // Display the shopping cart
-  document.getElementById("cart").style.display = "block";
+  // Display the backdrop overlay
+  document.getElementById("cart-overlay").style.display = "block";
+
+  // Fade in animation
+  cart.style.opacity = "0";
+  cart.style.display = "block";
+  setTimeout(() => {
+    cart.style.opacity = "1";
+  }, 100);
 
   // Populate customization options in the cart based on the selected product
   populateCustomizationOptions(product);
@@ -12,11 +18,20 @@ function openCart(product, imageUrl) {
     <p>${product}</p>
     <img src="${imageUrl}" alt="${product}" style="max-width: 100px; height: auto; margin-bottom: 10px;">
   `;
+
+  // Scroll to the cart
+  document.getElementById("cart").scrollIntoView({
+    behavior: "smooth",
+  });
+  
 }
 
 // Function to close the shopping cart
 function closeCart() {
+  // Hide the cart pop
   document.getElementById("cart").style.display = "none";
+  // Hide the backdrop overlay
+  document.getElementById("cart-overlay").style.display = "none";
 }
 
 function saveCustomization() {
@@ -60,6 +75,7 @@ function saveCustomization() {
       <span>${selectedOptions
         .map((option) => `${option.label} - ${option.value}`)
         .join(", ")}</span>
+      <button onclick="removeItem(this)">Remove</button>
     </div>
   `;
 
@@ -68,6 +84,16 @@ function saveCustomization() {
 
   // Close the cart after saving
   closeCart();
+  
+}
+
+// Function to remove an item from the basket
+function removeItem(button) {
+  // Get the parent li element of the button
+  const listItem = button.closest("li");
+
+  // Remove the entire li element from the basket
+  listItem.remove();
 }
 
 // Function to populate customization options based on the selected item
@@ -165,9 +191,29 @@ function createNumberInput(item, label) {
   numberInput.name = `${item}_${label.toLowerCase().replace(/\s+/g, "_")}`;
   numberInput.className = "inputDetalhes required";
 
-  // Add event listener to validate input (allow only numbers)
+  // Set the minimum value to 30
+  numberInput.min = 30;
+
+  let isTyping = false; // Flag to track ongoing user input
+
+  // Add event listener to allow only numbers and enforce minimum value
   numberInput.addEventListener("input", function () {
+    // Allow only numbers
     this.value = this.value.replace(/[^0-9]/g, "");
+
+    // Set the flag to true when the user starts typing
+    isTyping = true;
+  });
+
+  // Add a blur event listener to enforce the minimum value when the user finishes typing
+  numberInput.addEventListener("blur", function () {
+    // Enforce minimum value (set to 30 if less than 30) only if the user has finished typing
+    if (isTyping && parseInt(this.value) < 30) {
+      this.value = "30";
+    }
+
+    // Reset the typing flag
+    isTyping = false;
   });
 
   return numberInput;

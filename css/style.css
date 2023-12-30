@@ -11,7 +11,6 @@
 /* Body Styles */
 body {
   font-family: Inter, sans-serif;
-  padding: 0 calc(8px + 1.5625vw) 0 calc(8px + 1.5625vw);
 }
 
 /* Logo Styles */
@@ -30,7 +29,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 110;
-  background-color: white;
+  background-color: white;  
+  padding: 0 calc(8px + 1.5625vw) 0 calc(8px + 1.5625vw);
 }
 
 /* Menu Styles */
@@ -57,7 +57,7 @@ a {
 }
 
 .menu-item {
-  padding: 0.8rem 0.8rem 0 0;
+  padding: 0.8rem 2rem 0 0;
 }
 
 #menu-item1 {
@@ -92,7 +92,8 @@ footer {
   bottom: 0;
   z-index: 100;
   background-color: white;
-  text-align: center;
+  text-align: center;    
+  padding: 0 calc(8px + 1.5625vw) 0 calc(8px + 1.5625vw);
 }
 
 /* Socials Styles */
@@ -105,7 +106,7 @@ footer {
 
 .socials li {
   font-size: 1rem;
-  padding-right: 1rem;
+  padding-right: 2rem;
 }
 
 .socials a {
@@ -116,7 +117,8 @@ footer {
 /* Main Content Styles */
 main {
   position: relative;
-  z-index: 1;
+  z-index: 1;    
+  margin: 0 calc(8px + 1.5625vw) 0 calc(8px + 1.5625vw);
 }
 
 p {
@@ -185,7 +187,9 @@ p {
 .center-box-33,
 .right-box-33 {
   flex: 1;
-  box-sizing: border-box;
+  box-sizing: border-box;    
+  border: 1px solid #3f84c5;
+  padding: 1rem;
 }
 
 /* flexproducts */
@@ -280,6 +284,7 @@ p {
 
   #mobile-menu {
     display: flex; /* Show the mobile menu on smaller screens */
+    padding: 0.5rem 0 0.5rem 0;
   }
 
   /* Style to show only the word "Menu" */
