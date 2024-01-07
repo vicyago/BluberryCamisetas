@@ -38,7 +38,6 @@
   cursor: pointer;
 }
 
-
 /* Media query for responsiveness on small screens */
 @media screen and (max-width: 767px) {
   .modal-content {

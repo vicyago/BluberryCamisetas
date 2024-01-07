@@ -15,7 +15,6 @@ function showFooter() {
 }
 
 function openCart(product, imageUrl) {
-
   // Hide the footer
   hideFooter();
 
@@ -101,31 +100,35 @@ function saveCustomization() {
       flex-direction: column;
       justify-content: center;
       "> 
-        ${selectedOptions.map((option) => `<li style="border: none;">${option.label} - ${option.value}</li>`).join("")}
+        ${selectedOptions
+          .map(
+            (option) =>
+              `<li style="border: none;">${option.label} - <span style="color: #3f84c5; font-weight: bold;">${option.value}</li>`
+          )
+          .join("")}
       </ul>
       <button style="margin: 0;" onclick="removeItem(this)">Remover</button>
     </div>
   `;
 
-// Append the list item to the basket
-document.getElementById("basket-list").appendChild(listItem);
+  // Append the list item to the basket
+  document.getElementById("basket-list").appendChild(listItem);
 
-   // Make the basket visible
-   showBasket();
+  // Make the basket visible
+  showBasket();
 
-   // Close the cart after saving
-   closeCart();
+  // Close the cart after saving
+  closeCart();
 
-   // Show the footer after saving
+  // Show the footer after saving
   showFooter();
+}
 
- }
- 
- // New function to show the basket
- function showBasket() {
-   const basket = document.getElementById("basket");
-   basket.style.display = "flex"; // Use "flex" to display as a flex container, or use "block" based on your styling
- }
+// New function to show the basket
+function showBasket() {
+  const basket = document.getElementById("basket");
+  basket.style.display = "flex"; // Use "flex" to display as a flex container, or use "block" based on your styling
+}
 
 // Function to remove an item from the basket
 function removeItem(button) {
@@ -139,7 +142,9 @@ function removeItem(button) {
 // Function to clear customization options in the cart
 function clearCustomization() {
   // Get the customization options container
-  const customizationOptionsContainer = document.getElementById("customization-options");
+  const customizationOptionsContainer = document.getElementById(
+    "customization-options"
+  );
 
   // Iterate over child elements and clear input values
   for (const element of customizationOptionsContainer.children) {
@@ -344,4 +349,3 @@ function onProductSelection(object) {
     object.checked = true;
   }
 }
-
