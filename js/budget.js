@@ -172,7 +172,22 @@ function populateCustomizationOptions(item) {
   const customizationOptions = {
     camiseta: [
       { label: "Malha da Peça", values: ["Algodão", "Poliviscose"] },
-      { label: "Cor da Peça", values: ["#fff", "#000", "#00f"] },
+      {
+        label: "Cor da Peça",
+        values: [
+          "Preto",
+          "Marrom",
+          "Vermelho",
+          "Laranja",
+          "Amarelo",
+          "Verde",
+          "Azul",
+          "Roxo",
+          "Rosa",
+          "Branco",
+          "Cinza",
+        ],
+      },
       { label: "Tamanho da Peça", values: ["PP", "P", "M", "G", "GG"] },
       { label: "Quantidade", inputType: "number", name: "quantidadecamiseta" },
     ],
