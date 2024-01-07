@@ -49,8 +49,10 @@ button {
 /* Media Query for Mobile Screens */
 @media (max-width: 767px) {
   .slider-container {
-    height: 25vh; /* Adjust as needed for mobile screens */
-    margin-bottom: -10vh;
+    height: 25vh; /* Adjust as needed for mobile screens */  
+    -webkit-box-shadow: none;
+  -moz-box-shadow: none; 
+    box-shadow: none;
   }
 
   .slide img {
