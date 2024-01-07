@@ -11,7 +11,7 @@
   text-align: center;
   -webkit-box-shadow: 4px 4px 5px 0px rgba(94, 94, 94, 1);
   -moz-box-shadow: 4px 4px 5px 0px rgba(94, 94, 94, 1);
-  box-shadow: 4px 4px 5px 0px rgba(94, 94, 94, 1); /* Add a drop shadow with desired properties */
+  box-shadow: 4px 4px 5px 0px rgba(94, 94, 94, 1);
 }
 
 /* Add a backdrop overlay style */
@@ -28,9 +28,10 @@
 /* Style for the customization options within the cart */
 #customization-options {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   padding: 0.5rem; /* Add padding for a bit of spacing */
+  gap: 1rem;
 }
 
 /* Style for customization options labels */
@@ -83,7 +84,7 @@
 /* Style for each product label within the product list */
 #product-list label {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex: 1; /* Make labels take equal space */
   text-align: center;
   align-items: center;
@@ -100,27 +101,42 @@
 
 /* Style for the basket container */
 #basket {
-  width: 60%; /* Set the width to 50% */
+  width: 100%; /* Set the width to 50% */
   margin: 1rem auto; /* Center the container horizontally */
   -webkit-box-shadow: 4px 4px 5px 0px rgba(94, 94, 94, 1);
   -moz-box-shadow: 4px 4px 5px 0px rgba(94, 94, 94, 1);
   box-shadow: 4px 4px 5px 0px rgba(94, 94, 94, 1);
-  padding: 1rem;
+  padding: 1rem 0 1rem 2rem;
   background-color: #fff;
   display: none; /* Initially hide the basket */
   flex-wrap: wrap;
   justify-content: center;
   font-size: 1.4rem;
+  overflow: hidden;
+}
+
+/* Style for each item in the basket list */
+#basket-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#basket-list div {
+  min-width: 15rem;
+  min-height: 25rem;
 }
 
 /* Style for each item in the basket list */
 #basket-list li {
   margin-bottom: 0; /* Set margin-bottom to 0 to eliminate spacing between list items */
-  margin-right: 1rem;
+  margin-right: 2rem;
   box-sizing: border-box;
   border: 0.1rem solid #000000;
-  padding: 1rem;
+  padding: 0.6rem;
   font-size: 1rem;
+  flex-basis: calc(33.33% - 0);
+  margin-top: 0.9rem;
 }
 
 /* Style for the form within the basket */
@@ -210,7 +226,7 @@ button:hover {
 .comentarioHolder textarea {
   display: block;
   margin: 1rem auto; /* Center the textarea horizontally */
-  width: 60%; /* Set the width to 50% */
+  width: 80%; /* Set the width to 50% */
   box-sizing: border-box; /* Include padding and border in the width calculation */
 }
 

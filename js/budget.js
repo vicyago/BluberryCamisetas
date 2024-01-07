@@ -94,7 +94,7 @@ function saveCustomization() {
   listItem.innerHTML = `
     <div style="display: flex; flex-direction: column; align-items: center;">
       <img src="${imageUrl}" alt="${product}" style="max-width: 50px; height: auto; margin: 0;">
-      <ul style="padding: 0; margin: 0 -1rem 0 0; text-align: center; list-style: none; 
+      <ul style="padding: 0; margin: 0 -2rem 0 0; text-align: center; list-style: none; 
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
@@ -137,6 +137,19 @@ function removeItem(button) {
 
   // Remove the entire li element from the basket
   listItem.remove();
+
+  // Check if the basket is empty after removal
+  const basketList = document.getElementById("basket-list");
+  if (basketList.children.length === 0) {
+    // If the basket is empty, hide the basket
+    hideBasket();
+  }
+}
+
+// Function to hide the basket
+function hideBasket() {
+  const basket = document.getElementById("basket");
+  basket.style.display = "none";
 }
 
 // Function to clear customization options in the cart
@@ -171,9 +184,9 @@ function populateCustomizationOptions(item) {
 
   const customizationOptions = {
     camiseta: [
-      { label: "Malha da Peça", values: ["Algodão", "Poliviscose"] },
+      { label: "Malha", values: ["Algodão", "Poliviscose"] },
       {
-        label: "Cor da Peça",
+        label: "Cor",
         values: [
           "Preto",
           "Marrom",
@@ -188,12 +201,13 @@ function populateCustomizationOptions(item) {
           "Cinza",
         ],
       },
-      { label: "Tamanho da Peça", values: ["PP", "P", "M", "G", "GG"] },
+      { label: "Gola", values: ["Redonda/Careca", "Gola V"] }, 
+      { label: "Tamanho", values: ["PP", "P", "M", "G", "GG"] },
       { label: "Quantidade", inputType: "number", name: "quantidadecamiseta" },
     ],
     polo: [
       {
-        label: "Material da Peça",
+        label: "Material",
         values: [
           "Algodão Cardada",
           "Algodão Penteada",
@@ -201,21 +215,52 @@ function populateCustomizationOptions(item) {
           "Piquet",
         ],
       },
-      { label: "Cor da Peça", values: ["#000", "#888", "#c0c0c0"] },
-      { label: "Tamanho da Peça", values: ["PP", "P", "M", "G", "GG"] },
+      {
+        label: "Cor",
+        values: [
+          "Preto",
+          "Marrom",
+          "Vermelho",
+          "Laranja",
+          "Amarelo",
+          "Verde",
+          "Azul",
+          "Roxo",
+          "Rosa",
+          "Branco",
+          "Cinza",
+        ],
+      },
+      { label: "Gola", values: ["Polo"] },
+      { label: "Tamanho", values: ["PP", "P", "M", "G", "GG"] },
       { label: "Quantidade", inputType: "number", name: "quantidadepolo" },
     ],
     agasalho: [
-      { label: "Malha da Peça", values: ["Moleton Flanelado"] },
-      { label: "Cor da Peça", values: ["#fff", "#808080", "#d3d3d3"] },
-      { label: "Capuz", values: ["Com Capuz", "Sem Capuz"] },
-      { label: "Bolso", values: ["Com Bolso", "Sem Bolso"] },
-      { label: "Tamanho da Peça", values: ["PP", "P", "M", "G", "GG"] },
+      { label: "Malhaa", values: ["Moleton Flanelado"] },
+      
+      {
+        label: "Cor",
+        values: [
+          "Preto",
+          "Marrom",
+          "Vermelho",
+          "Laranja",
+          "Amarelo",
+          "Verde",
+          "Azul",
+          "Roxo",
+          "Rosa",
+          "Branco",
+          "Cinza",
+        ],
+      },
+      { label: "Gola e Bolso", values: ["Com Capuz", "Sem Capuz", "Com Bolso", "Sem Bolso", "Com Bolso e Capuz"] },
+      { label: "Tamanho", values: ["PP", "P", "M", "G", "GG"] },
       { label: "Quantidade", inputType: "number", name: "quantidadeagasalho" },
     ],
     abada: [
       {
-        label: "Malha da Peça",
+        label: "Malha",
         values: [
           "Algodão Cardada",
           "Algodão Penteada",
@@ -224,26 +269,58 @@ function populateCustomizationOptions(item) {
           "Dry fit Poliamida",
         ],
       },
-      { label: "Cor da Peça", values: ["#fff", "#000", "#00f"] },
-      { label: "Abertura Lateral", values: ["Fechado", "Elastico"] },
-      { label: "Tamanho da Peça", values: ["PP", "P", "M", "G", "GG"] },
+      {
+        label: "Cor",
+        values: [
+          "Preto",
+          "Marrom",
+          "Vermelho",
+          "Laranja",
+          "Amarelo",
+          "Verde",
+          "Azul",
+          "Roxo",
+          "Rosa",
+          "Branco",
+          "Cinza",
+        ],
+      },
+      { label: "Abertura Lateral", values: ["Fechado", "Elástico"] },
+      { label: "Gola", values: ["Única"] },
+      { label: "Tamanho", values: ["PP", "P", "M", "G", "GG"] },
       { label: "Quantidade", inputType: "number", name: "quantidadeabada" },
     ],
     ecobag: [
-      { label: "Malha da Peça", values: ["Algodão Cru"] },
-      { label: "Cor da Peça", values: ["#C7A975"] },
+      { label: "Malha", values: ["Algodão Cru"] },
+      { label: "Cor", values: ["Algodão Cru"] },
       { label: "Tipo de Alça", values: ["Algodao Trançado"] },
-      { label: "Tamanho da Peça", values: ["Unico"] },
+      { label: "Tamanho", values: ["Unico"] },
       { label: "Quantidade", inputType: "number", name: "quantidadeecobag" },
     ],
     mascara: [
       {
-        label: "Malha da Peça",
+        label: "Malha",
         values: ["Algodão Cardada", "Algodão Penteada", "Poliviscose - PV"],
       },
-      { label: "Cor da Peça", values: ["#fff", "#808080", "#d3d3d3"] },
+      {
+        label: "Cor",
+        values: [
+          "Preto",
+          "Marrom",
+          "Vermelho",
+          "Laranja",
+          "Amarelo",
+          "Verde",
+          "Azul",
+          "Roxo",
+          "Rosa",
+          "Branco",
+          "Cinza",
+        ],
+      },
+      { label: "Alça", values: ["Elástico"] },
       { label: "Tipo de Forma", values: ["Bico de Pato"] },
-      { label: "Tamanho da Peça", values: ["Unico"] },
+      { label: "Tamanho", values: ["Unico"] },
       { label: "Quantidade", inputType: "number", name: "quantidademascara" },
     ],
   };
