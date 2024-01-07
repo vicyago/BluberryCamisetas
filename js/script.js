@@ -29,3 +29,20 @@ document.addEventListener("DOMContentLoaded", () => {
   // Step 9: Listen for window resize events and update the menu text
   window.addEventListener("resize", checkScreenWidth);
 });
+
+// Step 10: Add active class to the page the user is on
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the current page URL
+  var currentUrl = window.location.href;
+
+  // Get all the links in the navigation
+  var navLinks = document.querySelectorAll(".menu a");
+
+  // Loop through each link and check if it matches the current URL
+  navLinks.forEach(function (link) {
+    if (link.href === currentUrl) {
+      // If the link matches, add the "active" class
+      link.classList.add("active");
+    }
+  });
+});

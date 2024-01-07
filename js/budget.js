@@ -23,7 +23,6 @@ function openCart(product, imageUrl) {
   document.getElementById("cart").scrollIntoView({
     behavior: "smooth",
   });
-  
 }
 
 // Function to close the shopping cart
@@ -32,6 +31,8 @@ function closeCart() {
   document.getElementById("cart").style.display = "none";
   // Hide the backdrop overlay
   document.getElementById("cart-overlay").style.display = "none";
+  // Deselect checkbox
+  onProductSelection();
 }
 
 function saveCustomization() {
@@ -84,7 +85,6 @@ function saveCustomization() {
 
   // Close the cart after saving
   closeCart();
-  
 }
 
 // Function to remove an item from the basket
@@ -94,6 +94,25 @@ function removeItem(button) {
 
   // Remove the entire li element from the basket
   listItem.remove();
+}
+
+// Function to clear customization options in the cart
+function clearCustomization() {
+  // Get the customization options container
+  const customizationOptionsContainer = document.getElementById("customization-options");
+
+  // Iterate over child elements and clear input values
+  for (const element of customizationOptionsContainer.children) {
+    if (
+      element.tagName === "DIV" &&
+      element.classList.contains("customization-option")
+    ) {
+      const input = element.querySelector("select, input");
+      if (input) {
+        input.value = "";
+      }
+    }
+  }
 }
 
 // Function to populate customization options based on the selected item
@@ -261,4 +280,79 @@ function submitForm() {
   // Log the basket content (you can implement logic to submit the form to the server here)
   console.log(basketContent);
   // Implement the logic to submit the form to the server (e.g., via AJAX or traditional form submission).
+}
+
+// Store all checboxes elements in an array
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+console.log(checkboxes);
+
+// Add event listener to each checkbox
+checkboxes.forEach(function (checkbox) {
+  checkbox.addEventListener("click", function () {
+    console.log("listener");
+    onProductSelection(checkbox);
+  });
+});
+
+// Iterate over each checkbox and mark them as unchecked, at the end check only the clicked checkbox
+function onProductSelection(object) {
+  for (let i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].checked = false;
+  }
+  // If no checkbox was clicked, function was called from the close button, otherwise we must select the checked box
+  if (object) {
+    object.checked = true;
+  }
+}
+
+//  Script for form submission simulation
+function simulateFormSubmission() {
+  // Retrieve the basket content and set it in the hidden input
+  const basketContent = document.getElementById("basket-list").innerHTML;
+  document.getElementById("hiddenBasketContent").value = basketContent;
+
+  // Retrieve user information
+  const userName = document.getElementById("Nome").value;
+  const userEmail = document.getElementById("Email").value;
+  const userComments = document.getElementById("Comentario").value;
+
+  // Create the content with Brazilian Portuguese labels
+  const content = `
+        <div style="border: 0.2rem solid #3f84c5; padding: 1rem; margin: 1rem 0; text-align: center;">
+            <h2 style="margin-bottom: 1rem;">Conteúdo Salvo</h2>
+            ${basketContent}
+            <p style="margin-top: 1rem; margin-bottom: 1rem;">Informações do Usuário:</p>
+            <ul style="justify-content: space-between; overflow: hidden;">
+                <li style="margin-bottom: 1rem;">Nome: ${userName}</li>
+                <li style="margin-bottom: 1rem;">Email: ${userEmail}</li>
+                <li style="margin-bottom: 1rem;">Celular: ${
+                  document.getElementById("DDD").value
+                } ${document.getElementById("Telefone").value}</li>
+                <li>Telefone: ${document.getElementById("DDD2").value} ${
+    document.getElementById("Telefone2").value
+  }</li>
+            </ul>
+            <ul style="overflow: hidden;" >
+                <li>Comentários: ${userComments}</li>
+            </ul>
+        </div>
+    `;
+
+  // Display the saved content
+  const savedContent = document.getElementById("saved-content");
+  savedContent.innerHTML = content;
+
+  // Show a thank you message
+  const thankYouMessage = document.createElement("p");
+  thankYouMessage.innerText =
+    "Obrigado pelo seu pedido! Recebemos suas informações com sucesso.";
+  thankYouMessage.style.color = "#3f84c5"; // You can adjust the styling as needed
+
+  // Append the thank you message to a specific container
+  const thanksContainer = document.getElementById("thanks-container");
+  thanksContainer.innerHTML = ""; // Clear existing content in the container
+  thanksContainer.appendChild(thankYouMessage);
+
+  // Optionally, you can reset the form fields after submission
+  document.getElementById("basket-form").reset();
 }

@@ -5,13 +5,17 @@
   position: fixed; /* Use fixed position to keep it centered on the screen */
   left: 50%;
   top: 60%;
-  transform: translate(-50%, -60%); /* Center the modal horizontally and vertically */
+  transform: translate(
+    -50%,
+    -60%
+  ); /* Center the modal horizontally and vertically */
   width: 80vw;
   height: 80vh;
   overflow: auto;
   background-color: #fefefe;
-  border: 1px solid #3f84c5;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a drop shadow with desired properties */
+  -webkit-box-shadow: 4px 4px 5px 0px rgba(94, 94, 94, 1);
+  -moz-box-shadow: 4px 4px 5px 0px rgba(94, 94, 94, 1);
+  box-shadow: 4px 4px 5px 0px rgba(94, 94, 94, 1); /* Add a drop shadow with desired properties */
 }
 
 .modal-content {

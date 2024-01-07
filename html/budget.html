@@ -10,10 +10,7 @@
     <!-- External style sheets -->
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/budget.css" />
-    <!-- External budget sheet -->
-    <script src="../js/budget.js"></script>
-    <!-- Title of the web page -->
-    <title>Textos</title>
+    <title>Orçamento</title>
   </head>
   <body>
     <!-- Header section with navigation -->
@@ -58,7 +55,7 @@
     <main>
       <!-- Section for product selection -->
       <div class="box">
-        <h2 class="centerFixData">Escolha os produtos</h2>
+        <h1 class="centerFixData">Escolha os produtos</h1>
       </div>
       <!-- Add a backdrop overlay element -->
       <div id="cart-overlay"></div>
@@ -66,9 +63,9 @@
       <div id="cart">
         <h2>Customização do item</h2>
         <div id="customization-options"></div>
-        <button onclick="saveCustomization()">Save</button>
-        <button onclick="clearCustomization()">Clear</button>
-        <button onclick="closeCart()">Close</button>
+        <button onclick="saveCustomization()">Salvar</button>
+        <button onclick="clearCustomization()">Limpar</button>
+        <button onclick="closeCart()">Fechar</button>
       </div>
       <!-- Product list with checkboxes -->
       <div id="product-list">
@@ -115,6 +112,7 @@
           <img src="../img/mask.png" alt="Máscara" /> Máscara
         </label>
       </div>
+      <br />
       <!-- Basket section to display selected items -->
       <div class="">
         <div id="product-info" style="display: none"></div>
@@ -280,60 +278,9 @@
       </ul>
     </footer>
 
-    <!-- Script for form submission simulation -->
-    <script>
-      function simulateFormSubmission() {
-        // Retrieve the basket content and set it in the hidden input
-        const basketContent = document.getElementById("basket-list").innerHTML;
-        document.getElementById("hiddenBasketContent").value = basketContent;
-
-        // Retrieve user information
-        const userName = document.getElementById("Nome").value;
-        const userEmail = document.getElementById("Email").value;
-        const userComments = document.getElementById("Comentario").value;
-
-        // Create the content with Brazilian Portuguese labels
-        const content = `
-        <div style="border: 0.2rem solid #3f84c5; padding: 1rem; margin: 1rem 0; text-align: center;">
-            <h2 style="margin-bottom: 1rem;">Conteúdo Salvo</h2>
-            ${basketContent}
-            <p style="margin-top: 1rem; margin-bottom: 1rem;">Informações do Usuário:</p>
-            <ul style="justify-content: space-between; overflow: hidden;">
-                <li style="margin-bottom: 1rem;">Nome: ${userName}</li>
-                <li style="margin-bottom: 1rem;">Email: ${userEmail}</li>
-                <li style="margin-bottom: 1rem;">Celular: ${
-                  document.getElementById("DDD").value
-                } ${document.getElementById("Telefone").value}</li>
-                <li>Telefone: ${document.getElementById("DDD2").value} ${
-          document.getElementById("Telefone2").value
-        }</li>
-            </ul>
-            <ul style="overflow: hidden;" >
-                <li>Comentários: ${userComments}</li>
-            </ul>
-        </div>
-    `;
-
-        // Display the saved content
-        const savedContent = document.getElementById("saved-content");
-        savedContent.innerHTML = content;
-
-        // Show a thank you message
-        const thankYouMessage = document.createElement("p");
-        thankYouMessage.innerText =
-          "Obrigado pelo seu pedido! Recebemos suas informações com sucesso.";
-        thankYouMessage.style.color = "#3f84c5"; // You can adjust the styling as needed
-
-        // Append the thank you message to a specific container
-        const thanksContainer = document.getElementById("thanks-container");
-        thanksContainer.innerHTML = ""; // Clear existing content in the container
-        thanksContainer.appendChild(thankYouMessage);
-
-        // Optionally, you can reset the form fields after submission
-        document.getElementById("basket-form").reset();
-      }
-    </script>
-
+    <!-- External budget sheet -->
+    <script src="../js/budget.js"></script>
+    <!-- Title of the web page -->
     <!-- JavaScript files -->
     <script src="../js/script.js"></script>
   </body>
