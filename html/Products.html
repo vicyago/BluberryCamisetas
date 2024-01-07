@@ -59,109 +59,48 @@
 
     <!-- Main content section -->
     <main>
+      <br /><br />
+      <h1>NOSSOS PRODUTOS</h1>
+
       <br />
 
-      <div
-        class="grid-item"
-        style="
-          background: url('../img/Wood.png');
-          background-size: cover;
-          background-blend-mode: multiply;
-          padding: 1rem 0.5rem 1rem 0.5rem;
-          color: #ffffff;
-        "
-      >
-        <h2 class="pNamePrdt">PRODUTOS</h2>
-
-        <br />
-
-        <div class="flex-container wrap">
-          <div
-            class="product"
-            data-product-name="Camiseta"
-            onclick="toggleModal('camiseta')"
-          >
-            <img src="../img/camiseta.png" />
-            <p class="pNamePrdt">Camiseta</p>
-          </div>
-          <div
-            class="product"
-            data-product-name="Polo"
-            onclick="toggleModal('polo')"
-          >
-            <img src="../img/polo.png" />
-            <p class="pNamePrdt">Polo</p>
-          </div>
-          <div
-            class="product"
-            data-product-name="Agasalho"
-            onclick="toggleModal('agasalho')"
-          >
-            <img src="../img/hoodie.png" />
-            <p class="pNamePrdt">Agasalho</p>
-          </div>
-          <div
-            class="product"
-            data-product-name="Abadá"
-            onclick="toggleModal('abada')"
-          >
-            <img src="../img/abada.png" />
-            <p class="pNamePrdt">Abadá</p>
-          </div>
-          <div
-            class="product"
-            data-product-name="Ecobag"
-            onclick="toggleModal('ecobag')"
-          >
-            <img src="../img/ecobag.png" />
-            <p class="pNamePrdt">Ecobag</p>
-          </div>
-          <div
-            class="product"
-            data-product-name="Máscara"
-            onclick="toggleModal('mascara')"
-          >
-            <img src="../img/mask.png" />
-            <p class="pNamePrdt">Máscara</p>
-          </div>
-          <div
-            class="product"
-            data-product-name="Bordado"
-            onclick="toggleModal('bordado')"
-          >
-            <img src="../img/bordado.png" />
-            <p class="pNamePrdt">Bordado</p>
-          </div>
-          <div
-            class="product"
-            data-product-name="Silkscreen"
-            onclick="toggleModal('silkscreen')"
-          >
-            <img src="../img/silkscreen.png" />
-            <p class="pNamePrdt">Silkscreen</p>
-          </div>
-        </div>
+      <div>        
+        <p>
+          ✏ Camisetas: Abra espaço para a suavidade com nossas camisetas de
+          algodão penteado. Sinta a diferença em cada toque enquanto você se
+          destaca. Escolha seu colarinho preferido, do clássico ao moderno, e
+          adicione um toque pessoal com estampas que refletem a sua vibe.
+          <br /><br />
+          ✏ Polo: Elevação é a palavra-chave para nossas Polos. Suavidade de
+          alta qualidade que se destaca. Bordados refinados acrescentam um toque
+          exclusivo ao seu visual.
+          <br /><br />
+          ✏ Agasalhos: Mantenha o estilo aquecido com nossos agasalhos. Conforto
+          sem esforço, moda que transcende. Escolha com ou sem capuz e aproveite
+          a versatilidade de uma peça perfeita para qualquer ocasião.
+          <br /><br />
+          ✏ Abadás: Celebrar é uma arte, e nossos abadás são as pinceladas
+          coloridas dessa festa. Viva a energia, mergulhe nos desenhos únicos e
+          faça parte de uma comunidade que celebra a diversidade.
+          <br /><br />
+          ✏ Ecobags de Algodão Cru: Seja ecochic com nossas ecobags de algodão
+          cru. Leves, estilosas e eco-friendly. Faça uma declaração de moda
+          consciente enquanto carrega o essencial do dia a dia.
+          <br /><br />
+          ✏ Máscaras de Algodão: A proteção nunca esteve tão na moda. Escolha
+          entre designs que combinam com seu estilo e mantenha-se seguro com um
+          toque de elegância.
+        </p>
       </div>
 
-      <!-- Product Modals -->
+      <br /><br />
 
-      <br />
-      <br />
-
-      <div id="overlay"></div>
-
-      <div
-        id="camiseta-modal"
-        class="product-modal"
-        onclick="toggleModal('camiseta')"
-      >
-        <div class="modal-content">
-          <span class="close" onclick="toggleModal('camiseta')">&times;</span>
-          <img src="../img/camiseta.png" />
-          <br /><br />
+      <!-- Grid structure with articles and sections -->
+      <div class="grid1">
+        <article class="main1">
           <h1>Camiseta</h1>
-          <br />
-          <p class="description">
+          <br /><br />
+          <p>
             ✏ Apresentamos a nossa camiseta como uma fusão perfeita de conforto,
             estilo e habilidade. Fabricada com a melhor mistura de 100% algodão
             penteado, oferece uma sensação suave, respirável e luxuosa.
@@ -183,21 +122,22 @@
             trabalhada, onde conforto encontra sofisticação, e individualidade
             encontra qualidade.
           </p>
-          <!-- Add more content specific to the Camiseta product -->
-        </div>
+        </article>
+        <section class="side1">
+          <img src="../img/blueshirt.png" />
+        </section>
       </div>
 
-      <div id="polo-modal" class="product-modal" onclick="toggleModal('polo')">
-        <div class="modal-content">
-          <span class="close" onclick="toggleModal('polo')">&times;</span>
-          <img src="../img/polo.png" />
-          <br /><br />
+      <div class="grid2">
+        <article class="main2">
+          <img src="../img/blueshirt.png" />
+        </article>
+        <section class="side2">
           <h1>Polo</h1>
-          <br />
-          <p class="description">
+          <br /><br />
+          <p>
             ✏ Apresentamos a nossa Polo, uma obra-prima de estilo atemporal e
-            arte refinada.
-            <br /><br />
+            arte refinada. <br /><br />
             ✏ Cuidadosamente elaborada com atenção aos detalhes, esta peça-chave
             do guarda-roupa une perfeitamente conforto e sofisticação.
             <br /><br />
@@ -221,28 +161,18 @@
             ✏ Abrace o conforto e a sofisticação com nossa Polo especialmente
             confeccionada, onde qualidade e estilo duradouro se encontram.
           </p>
-
-          <!-- Add more content specific to the Polo product -->
-        </div>
+        </section>
       </div>
 
-      <div
-        id="agasalho-modal"
-        class="product-modal"
-        onclick="toggleModal('agasalho')"
-      >
-        <div class="modal-content">
-          <span class="close" onclick="toggleModal('agasalho')">&times;</span>
-          <img src="../img/hoodie.png" />
-          <br /><br />
+      <div class="grid1">
+        <article class="main1">
           <h1>Agasalho</h1>
-          <br />
-          <p class="description">
+          <br /><br />
+          <p>
             ✏ Apresentamos o nosso Agasalho, uma fusão perfeita de conforto e
             estilo. Cuidadosamente confeccionado com uma mistura premium de
             algodão e poliéster, oferece uma sensação aconchegante e
-            durabilidade duradoura.
-            <br /><br />
+            durabilidade duradoura. <br /><br />
             ✏ Escolha entre a clássica gola redonda para um toque casual ou a
             moderna gola com capuz para um visual contemporâneo.
             <br /><br />
@@ -260,26 +190,23 @@
             ✏ Experimente o auge do conforto e sofisticação com a T-Shirt Polo,
             uma peça meticulosamente confeccionada para um estilo duradouro.
           </p>
-          <!-- Add more content specific to the Agasalho product -->
-        </div>
+        </article>
+        <section class="side1">
+          <img src="../img/blueshirt.png" />
+        </section>
       </div>
 
-      <div
-        id="abada-modal"
-        class="product-modal"
-        onclick="toggleModal('abada')"
-      >
-        <div class="modal-content">
-          <span class="close" onclick="toggleModal('abada')">&times;</span>
-          <img src="../img/abada.png" />
-          <br /><br /><br />
+      <div class="grid2">
+        <article class="main2">
+          <img src="../img/blueshirt.png" />
+        </article>
+        <section class="side2">
           <h1>Abadá</h1>
-          <br />
-          <p class="description">
+          <br /><br />
+          <p>
             ✏ O abadá, ícone das festivas micaretas, transcende a simples
             vestimenta, sendo um espetáculo visual que une conforto, estilo e
-            pertencimento.
-            <br /><br />
+            pertencimento. <br /><br />
             ✏ Com um toque macio e respirável, este símbolo de união destaca-se
             pela qualidade do tecido, proporcionando não apenas conforto, mas
             também secagem rápida.
@@ -291,26 +218,17 @@
             festividades, transformando os usuários em parte essencial da
             expressiva paleta de cores que define a micareta.
           </p>
-          <!-- Add more content specific to the Abadá product -->
-        </div>
+        </section>
       </div>
 
-      <div
-        id="ecobag-modal"
-        class="product-modal"
-        onclick="toggleModal('ecobag')"
-      >
-        <div class="modal-content">
-          <span class="close" onclick="toggleModal('ecobag')">&times;</span>
-          <img src="../img/ecobag.png" />
-          <br /><br />
+      <div class="grid1">
+        <article class="main1">
           <h1>Ecobag</h1>
-          <br />
-          <p class="description">
+          <br /><br />
+          <p>
             ✏ A ecobag de algodão cru é muito mais do que um acessório
             ecológico; é uma declaração de sustentabilidade feita com fios de
-            algodão puro.
-            <br /><br />
+            algodão puro. <br /><br />
             ✏ Oferecendo uma alternativa elegante às sacolas convencionais, esta
             ecobag combina o charme do algodão cru com a consciência ambiental.
             <br /><br />
@@ -321,25 +239,22 @@
             ✏ Com seu design versátil e resistente, ela é a escolha perfeita
             para quem busca uma moda consciente e duradoura.
           </p>
-          <!-- Add more content specific to the Ecobag product -->
-        </div>
+        </article>
+        <section class="side1">
+          <img src="../img/blueshirt.png" />
+        </section>
       </div>
 
-      <div
-        id="mascara-modal"
-        class="product-modal"
-        onclick="toggleModal('mascara')"
-      >
-        <div class="modal-content">
-          <span class="close" onclick="toggleModal('mascara')">&times;</span>
-          <img src="../img/mask.png" />
-          <br /><br />
+      <div class="grid2">
+        <article class="main2">
+          <img src="../img/blueshirt.png" />
+        </article>
+        <section class="side2">
           <h1>Máscara</h1>
-          <br />
-          <p class="description">
+          <br /><br />
+          <p>
             ✏ A máscara de algodão vai além da segurança, é uma expressão
-            consciente de proteção pessoal com elegância.
-            <br /><br />
+            consciente de proteção pessoal com elegância. <br /><br />
             ✏ Feita com fios de algodão de alta qualidade, oferece conforto
             respirável e é uma escolha responsável para a prevenção.
             <br /><br />
@@ -350,25 +265,16 @@
             ✏ Ao usá-la, você não apenas se protege, mas também emite uma
             declaração de responsabilidade e estilo consciente.
           </p>
-          <!-- Add more content specific to the Máscara product -->
-        </div>
+        </section>
       </div>
 
-      <div
-        id="bordado-modal"
-        class="product-modal"
-        onclick="toggleModal('bordado')"
-      >
-        <div class="modal-content">
-          <span class="close" onclick="toggleModal('bordado')">&times;</span>
-          <img src="../img/bordado.png" />
-          <br /><br />
+      <div class="grid1">
+        <article class="main1">
           <h1>Bordado</h1>
-          <br />
-          <p class="description">
+          <br /><br />
+          <p>
             ✏ O bordado é mais do que uma técnica de decoração, é uma forma de
-            contar histórias com fios e agulhas.
-            <br /><br />
+            contar histórias com fios e agulhas. <br /><br />
             ✏ Cada ponto meticulosamente costurado é uma expressão de arte,
             transformando tecidos comuns em obras-primas personalizadas.
             <br /><br />
@@ -383,22 +289,20 @@
             complexo, o bordado é a marca registrada da exclusividade e estilo
             refinado.
           </p>
-          <!-- Add more content specific to the Bordado product -->
-        </div>
+        </article>
+        <section class="side1">
+          <img src="../img/blueshirt.png" />
+        </section>
       </div>
 
-      <div
-        id="silkscreen-modal"
-        class="product-modal"
-        onclick="toggleModal('silkscreen')"
-      >
-        <div class="modal-content">
-          <span class="close" onclick="toggleModal('silkscreen')">&times;</span>
-          <img src="../img/silkscreen.png" />
-          <br /><br />
+      <div class="grid2">
+        <article class="main2">
+          <img src="../img/blueshirt.png" />
+        </article>
+        <section class="side2">
           <h1>Silkscreen</h1>
-          <br />
-          <p class="description">
+          <br /><br />
+          <p>
             ✏ A serigrafia é uma forma de arte que transcende as fronteiras do
             comum, transformando simples telas em expressões vibrantes.
             <br /><br />
@@ -420,42 +324,8 @@
             simplesmente apreciar a beleza visual, a serigrafia expressiva é um
             testemunho da fusão entre arte e moda contemporânea.
           </p>
-          <!-- Add more content specific to the Silkscreen product -->
-        </div>
+        </section>
       </div>
-
-      <div class="grid-container">
-            <h3>NOSSOS PRODUTOS</h3>              
-              <p>
-                ✏ Camisetas: Abra espaço para a suavidade com nossas camisetas
-                de algodão penteado. Sinta a diferença em cada toque enquanto
-                você se destaca. Escolha seu colarinho preferido, do clássico ao
-                moderno, e adicione um toque pessoal com estampas que refletem a
-                sua vibe.
-                <br /><br />
-                ✏ Polo: Elevação é a palavra-chave para nossas Polos. Suavidade
-                de alta qualidade que se destaca. Bordados refinados acrescentam
-                um toque exclusivo ao seu visual.
-                <br /><br />
-                ✏ Agasalhos: Mantenha o estilo aquecido com nossos agasalhos.
-                Conforto sem esforço, moda que transcende. Escolha com ou sem
-                capuz e aproveite a versatilidade de uma peça perfeita para
-                qualquer ocasião.
-                <br /><br />
-                ✏ Abadás: Celebrar é uma arte, e nossos abadás são as pinceladas
-                coloridas dessa festa. Viva a energia, mergulhe nos desenhos
-                únicos e faça parte de uma comunidade que celebra a diversidade.
-                <br /><br />
-                ✏ Ecobags de Algodão Cru: Seja ecochic com nossas ecobags de
-                algodão cru. Leves, estilosas e eco-friendly. Faça uma
-                declaração de moda consciente enquanto carrega o essencial do
-                dia a dia.
-                <br /><br />
-                ✏ Máscaras de Algodão: A proteção nunca esteve tão na moda.
-                Escolha entre designs que combinam com seu estilo e mantenha-se
-                seguro com um toque de elegância.
-              </p>
-            </div>            
     </main>
 
     <!-- Spacer to Fill Remaining Space -->
@@ -481,6 +351,5 @@
 
     <!-- JavaScript file -->
     <script src="../js/script.js"></script>
-    <script src="../js/products.js"></script>
   </body>
 </html>

@@ -92,12 +92,12 @@ function saveCustomization() {
   // Create a list item to display saved options with the product image
   const listItem = document.createElement("li");
   listItem.innerHTML = `
-    <div style="display: flex; flex-direction: column; align-items: center;">
+    <div style="display: flex; flex-direction: row; align-items: center;">
       <img src="${imageUrl}" alt="${product}" style="max-width: 50px; height: auto; margin: 0;">
-      <ul style="padding: 0; margin: 0 -2rem 0 0; text-align: center; list-style: none; 
+      <ul style="padding: 0; margin: 0; text-align: center; list-style: none; 
       display: flex;
       flex-wrap: wrap;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
       "> 
         ${selectedOptions
@@ -107,7 +107,7 @@ function saveCustomization() {
           )
           .join("")}
       </ul>
-      <button style="margin: 0;" onclick="removeItem(this)">Remover</button>
+      <button style="cursor: pointer; margin: 0; background-color: transparent; scale:50%" onclick="removeItem(this)">❌</button>
     </div>
   `;
 
@@ -236,7 +236,7 @@ function populateCustomizationOptions(item) {
       { label: "Quantidade", inputType: "number", name: "quantidadepolo" },
     ],
     agasalho: [
-      { label: "Malhaa", values: ["Moleton Flanelado"] },
+      { label: "Malha", values: ["Moleton Flanelado"] },
       
       {
         label: "Cor",
