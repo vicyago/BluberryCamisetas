@@ -26,7 +26,8 @@
 }
 
 .close {
-  color: transparent;
+  color: black;
+  font-size: xx-large;
   float: right;
 }
 
@@ -36,6 +37,7 @@
   text-decoration: none;
   cursor: pointer;
 }
+
 
 /* Media query for responsiveness on small screens */
 @media screen and (max-width: 767px) {

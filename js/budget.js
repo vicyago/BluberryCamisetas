@@ -1,4 +1,24 @@
+// Function to hide the footer
+function hideFooter() {
+  const footer = document.getElementById("footer");
+  if (footer) {
+    footer.style.display = "none";
+  }
+}
+
+// Function to show the footer
+function showFooter() {
+  const footer = document.getElementById("footer");
+  if (footer) {
+    footer.style.display = "block";
+  }
+}
+
 function openCart(product, imageUrl) {
+
+  // Hide the footer
+  hideFooter();
+
   // Display the backdrop overlay
   document.getElementById("cart-overlay").style.display = "block";
 
@@ -31,6 +51,8 @@ function closeCart() {
   document.getElementById("cart").style.display = "none";
   // Hide the backdrop overlay
   document.getElementById("cart-overlay").style.display = "none";
+  // Show the footer after saving
+  showFooter();
   // Deselect checkbox
   onProductSelection();
 }
@@ -71,21 +93,39 @@ function saveCustomization() {
   // Create a list item to display saved options with the product image
   const listItem = document.createElement("li");
   listItem.innerHTML = `
-    <div>
-      <img src="${imageUrl}" alt="${product}" style="max-width: 50px; height: auto; margin-right: 10px;">
-      <span>${selectedOptions
-        .map((option) => `${option.label} - ${option.value}`)
-        .join(", ")}</span>
-      <button onclick="removeItem(this)">Remove</button>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <img src="${imageUrl}" alt="${product}" style="max-width: 50px; height: auto; margin: 0;">
+      <ul style="padding: 0; margin: 0 -1rem 0 0; text-align: center; list-style: none; 
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      "> 
+        ${selectedOptions.map((option) => `<li style="border: none;">${option.label} - ${option.value}</li>`).join("")}
+      </ul>
+      <button style="margin: 0;" onclick="removeItem(this)">Remover</button>
     </div>
   `;
 
-  // Append the list item to the basket
-  document.getElementById("basket-list").appendChild(listItem);
+// Append the list item to the basket
+document.getElementById("basket-list").appendChild(listItem);
 
-  // Close the cart after saving
-  closeCart();
-}
+   // Make the basket visible
+   showBasket();
+
+   // Close the cart after saving
+   closeCart();
+
+   // Show the footer after saving
+  showFooter();
+
+ }
+ 
+ // New function to show the basket
+ function showBasket() {
+   const basket = document.getElementById("basket");
+   basket.style.display = "flex"; // Use "flex" to display as a flex container, or use "block" based on your styling
+ }
 
 // Function to remove an item from the basket
 function removeItem(button) {
@@ -305,54 +345,3 @@ function onProductSelection(object) {
   }
 }
 
-//  Script for form submission simulation
-function simulateFormSubmission() {
-  // Retrieve the basket content and set it in the hidden input
-  const basketContent = document.getElementById("basket-list").innerHTML;
-  document.getElementById("hiddenBasketContent").value = basketContent;
-
-  // Retrieve user information
-  const userName = document.getElementById("Nome").value;
-  const userEmail = document.getElementById("Email").value;
-  const userComments = document.getElementById("Comentario").value;
-
-  // Create the content with Brazilian Portuguese labels
-  const content = `
-        <div style="border: 0.2rem solid #3f84c5; padding: 1rem; margin: 1rem 0; text-align: center;">
-            <h2 style="margin-bottom: 1rem;">Conteúdo Salvo</h2>
-            ${basketContent}
-            <p style="margin-top: 1rem; margin-bottom: 1rem;">Informações do Usuário:</p>
-            <ul style="justify-content: space-between; overflow: hidden;">
-                <li style="margin-bottom: 1rem;">Nome: ${userName}</li>
-                <li style="margin-bottom: 1rem;">Email: ${userEmail}</li>
-                <li style="margin-bottom: 1rem;">Celular: ${
-                  document.getElementById("DDD").value
-                } ${document.getElementById("Telefone").value}</li>
-                <li>Telefone: ${document.getElementById("DDD2").value} ${
-    document.getElementById("Telefone2").value
-  }</li>
-            </ul>
-            <ul style="overflow: hidden;" >
-                <li>Comentários: ${userComments}</li>
-            </ul>
-        </div>
-    `;
-
-  // Display the saved content
-  const savedContent = document.getElementById("saved-content");
-  savedContent.innerHTML = content;
-
-  // Show a thank you message
-  const thankYouMessage = document.createElement("p");
-  thankYouMessage.innerText =
-    "Obrigado pelo seu pedido! Recebemos suas informações com sucesso.";
-  thankYouMessage.style.color = "#3f84c5"; // You can adjust the styling as needed
-
-  // Append the thank you message to a specific container
-  const thanksContainer = document.getElementById("thanks-container");
-  thanksContainer.innerHTML = ""; // Clear existing content in the container
-  thanksContainer.appendChild(thankYouMessage);
-
-  // Optionally, you can reset the form fields after submission
-  document.getElementById("basket-form").reset();
-}
