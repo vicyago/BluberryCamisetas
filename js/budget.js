@@ -201,7 +201,7 @@ function populateCustomizationOptions(item) {
           "Cinza",
         ],
       },
-      { label: "Gola", values: ["Redonda/Careca", "Gola V"] }, 
+      { label: "Gola", values: ["Redonda/Careca", "Gola V"] },
       { label: "Tamanho", values: ["PP", "P", "M", "G", "GG"] },
       { label: "Quantidade", inputType: "number", name: "quantidadecamiseta" },
     ],
@@ -237,7 +237,6 @@ function populateCustomizationOptions(item) {
     ],
     agasalho: [
       { label: "Malha", values: ["Moleton Flanelado"] },
-      
       {
         label: "Cor",
         values: [
@@ -254,7 +253,16 @@ function populateCustomizationOptions(item) {
           "Cinza",
         ],
       },
-      { label: "Gola e Bolso", values: ["Com Capuz", "Sem Capuz", "Com Bolso", "Sem Bolso", "Com Bolso e Capuz"] },
+      {
+        label: "Gola e Bolso",
+        values: [
+          "Com Capuz",
+          "Sem Capuz",
+          "Com Bolso",
+          "Sem Bolso",
+          "Com Bolso e Capuz",
+        ],
+      },
       { label: "Tamanho", values: ["PP", "P", "M", "G", "GG"] },
       { label: "Quantidade", inputType: "number", name: "quantidadeagasalho" },
     ],
@@ -286,14 +294,13 @@ function populateCustomizationOptions(item) {
         ],
       },
       { label: "Abertura Lateral", values: ["Fechado", "Elástico"] },
-      { label: "Gola", values: ["Única"] },
       { label: "Tamanho", values: ["PP", "P", "M", "G", "GG"] },
       { label: "Quantidade", inputType: "number", name: "quantidadeabada" },
     ],
     ecobag: [
       { label: "Malha", values: ["Algodão Cru"] },
       { label: "Cor", values: ["Algodão Cru"] },
-      { label: "Tipo de Alça", values: ["Algodao Trançado"] },
+      { label: "Alça", values: ["Algodao Trançado"] },
       { label: "Tamanho", values: ["Unico"] },
       { label: "Quantidade", inputType: "number", name: "quantidadeecobag" },
     ],
@@ -318,8 +325,7 @@ function populateCustomizationOptions(item) {
           "Cinza",
         ],
       },
-      { label: "Alça", values: ["Elástico"] },
-      { label: "Tipo de Forma", values: ["Bico de Pato"] },
+      { label: "Forma", values: ["Bico de Pato"] },
       { label: "Tamanho", values: ["Unico"] },
       { label: "Quantidade", inputType: "number", name: "quantidademascara" },
     ],

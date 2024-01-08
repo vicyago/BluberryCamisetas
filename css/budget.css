@@ -51,6 +51,13 @@
   border: 0.2rem solid #ccc; /* Add a subtle border for separation */
 }
 
+/* Style for the product h5 tag right position */
+.h5budget {
+  color: #3f84c5;
+  font-weight: bold;
+  margin-left: 50vw;
+}
+
 /* Style for the product list container */
 #product-list {
   text-align: center;
@@ -101,12 +108,12 @@
 
 /* Style for each item in the basket list */
 #basket-list li {
-  margin-bottom: 0; /* Set margin-bottom to 0 to eliminate spacing between list items */  
+  margin-bottom: 0; /* Set margin-bottom to 0 to eliminate spacing between list items */
   box-sizing: border-box;
   border: 0.1rem solid #000000;
-  padding: 0.2rem ;
+  padding: 0.2rem;
   margin: 1rem;
-  font-size: 0.8rem; 
+  font-size: 0.8rem;
 }
 
 #basket-list li img {
@@ -274,9 +281,58 @@ button:hover {
     width: 85vw;
   }
 
-  /* Responsive styling for customization options */
+  /* Style for the customization options within the cart */
+  #customization-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.3rem; /* Add padding for a bit of spacing */
+    gap: 0.5rem;
+  }
+
+  /* Style for customization options labels */
   #customization-options label {
+    margin-bottom: 0.3rem;
+    font-weight: bold; /* Make labels bold for emphasis */
+    display: block; /* Change display to block to stack labels */
+  }
+
+  /* Style for customization options inputs and selects */
+  #customization-options input,
+  #customization-options select {
     width: 100%;
+    box-sizing: border-box;
+    padding: 0.3rem;
+    margin-bottom: 0.3rem;
+    text-align: center;
+    border: 0.2rem solid #ccc; /* Add a subtle border for separation */
+  }
+
+  /* Make label and input be flex column and stack on top of each other */
+  #customization-options label,
+  #customization-options input,
+  #customization-options select {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Style for the product h5 tag right position */
+  .h5budget {
+    margin-top: 0.5rem;
+    color: #3f84c5;
+    font-weight: bold;
+    margin-left: 0vw;
+  }
+
+  /* Style for buttons */
+  button {
+    padding: 0.25rem 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.1rem;
+    margin: 0.5rem 0.1rem 0.1rem 0.1rem;
+    cursor: pointer;
   }
 
   /* Responsive styling for basket options */

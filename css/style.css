@@ -62,7 +62,7 @@ a {
 }
 
 #menu-item1 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 700;
 }
 
@@ -141,7 +141,7 @@ main {
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 /* Grid Layout Styles */
@@ -149,7 +149,7 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
   gap: calc(8px + 1.5625vw);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .grid-item {
@@ -253,6 +253,14 @@ p {
 }
 .pNamePrdt {
   text-align: center;
+}
+
+/* Css for the about.html page is only applied there */
+.container p {
+  margin: auto; /* Set margin for p tag in the container */
+}
+.centerFixData {
+  font-size: 1.9rem; /* Weird adjustment to h1 in about.html */
 }
 
 /* Responsive Styles */

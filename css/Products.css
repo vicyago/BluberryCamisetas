@@ -11,6 +11,7 @@
 .side2 {
   height: auto;
   display: flex;
+  padding: 0 1rem 3rem 1rem;;
 }
 
 .main1 img,
@@ -28,7 +29,17 @@
   grid-column: span 2;
 }
 
-/* Add this CSS to your existing stylesheet or in a <style> tag in your HTML */
+/* CSS to set height and weight to the images on page */
+
+.main1 img,
+.main2 img,
+.side1 img,
+.side2 img {
+  width: 100%; /* Ensure images take the full width of their container */
+  max-width: 100%; /* Ensure images don't exceed their container width */
+}
+
+/* CSS to vertically align h2 title of the products */
 
 h2.vert {
   display: inline-block;
@@ -38,6 +49,7 @@ h2.vert {
   text-align: center; /* Center the text within each h2 element */
   margin-bottom: 0.2rem; /* Adjust margin for spacing between h2 elements */
   text-transform: uppercase;
+  padding: 0 1rem 0 1rem;
 }
 
 h2.vert::first-letter {
@@ -49,17 +61,6 @@ h2.vert::after {
   content: '\A';
   white-space: pre;
   display: block;
-}
-
-/* Add this CSS to your existing stylesheet or in a <style> tag in your HTML */
-
-.main1 img,
-.main2 img,
-.side1 img,
-.side2 img {
-  width: 100%; /* Ensure images take the full width of their container */
-  height: auto; /* Maintain aspect ratio */
-  max-width: 100%; /* Ensure images don't exceed their container width */
 }
 
 /* Media query for responsiveness on small screens */
