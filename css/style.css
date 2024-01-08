@@ -31,6 +31,7 @@ header {
   z-index: 110;
   background-color: white;
   padding: 0 calc(8px + 1.5625vw) 0 calc(8px + 1.5625vw);
+  border-bottom: 0.1rem solid #ddd; /* Adjust the color and thickness as needed */
 }
 
 /* Menu Styles */
@@ -111,6 +112,7 @@ footer {
   background-color: white;
   text-align: center;
   padding: 0 calc(8px + 1.5625vw) 0 calc(8px + 1.5625vw);
+  border-top: 0.1rem solid #ddd; /* Adjust the color and thickness as needed */
 }
 
 /* Socials Styles */
