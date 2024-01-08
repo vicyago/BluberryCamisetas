@@ -1,12 +1,8 @@
 /* Grid Styles */
 .grid1,
 .grid2 {
-  display: grid;
-  column-gap: calc(8px + 1.5625vw);
+  display: grid;  
   grid-template-columns: 1fr 1fr 1fr; /* Added this line to define three columns */
-  margin-bottom: calc(8px + 1.5625vw);
-  padding: 1%;
-
 }
 
 .main1,
@@ -14,6 +10,14 @@
 .side1,
 .side2 {
   height: auto;
+  display: flex;
+}
+
+.main1 img,
+.main2 img,
+.side1 img,
+.side2 img{
+  justify-content: center;
 }
 
 .main1 {
@@ -24,10 +28,54 @@
   grid-column: span 2;
 }
 
+/* Add this CSS to your existing stylesheet or in a <style> tag in your HTML */
+
+h2.vert {
+  display: inline-block;
+  line-height: 1.2;
+  font-size: 2.4rem; /* Adjust font size as needed */
+  font-weight: bold;
+  text-align: center; /* Center the text within each h2 element */
+  margin-bottom: 0.2rem; /* Adjust margin for spacing between h2 elements */
+  text-transform: uppercase;
+}
+
+h2.vert::first-letter {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+h2.vert::after {
+  content: '\A';
+  white-space: pre;
+  display: block;
+}
+
+/* Add this CSS to your existing stylesheet or in a <style> tag in your HTML */
+
+.main1 img,
+.main2 img,
+.side1 img,
+.side2 img {
+  width: 100%; /* Ensure images take the full width of their container */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure images don't exceed their container width */
+}
+
 /* Media query for responsiveness on small screens */
 @media screen and (max-width: 767px) {
-  .description {
-    font-size: 1rem; /* Adjust the font size as needed */
-    line-height: 1.5; /* Adjust the line height for better readability */
+  
+  .grid1,
+  .grid2 {
+    grid-template-columns: 1fr; /* Set a single column for small screens */
+    column-gap: 0; /* Remove column gap on small screens */
+    margin-bottom: 10px; /* Add some margin for better spacing */
+  }
+
+  .main1,
+  .main2,
+  .side1,
+  .side2 {
+    grid-column: span 1; /* Reset the grid-column span for small screens */
   }
 }
