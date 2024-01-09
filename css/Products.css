@@ -1,8 +1,16 @@
+/* Define CSS variables for common values */
+:root {
+  --box-shadow: 4px 4px 5px 0px rgba(94, 94, 94, 1);
+}
+
 /* Grid Styles */
 .grid1,
 .grid2 {
-  display: grid;  
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* Added this line to define three columns */
+  box-shadow: var(--box-shadow);
+  margin: 2rem;
+  padding: 1rem;
 }
 
 .main1,
@@ -11,14 +19,7 @@
 .side2 {
   height: auto;
   display: flex;
-  padding: 0 1rem 3rem 1rem;;
-}
-
-.main1 img,
-.main2 img,
-.side1 img,
-.side2 img{
-  justify-content: center;
+  padding: 0 1rem 3rem 1rem;
 }
 
 .main1 {
@@ -31,12 +32,10 @@
 
 /* CSS to set height and weight to the images on page */
 
-.main1 img,
-.main2 img,
-.side1 img,
-.side2 img {
-  width: 100%; /* Ensure images take the full width of their container */
-  max-width: 100%; /* Ensure images don't exceed their container width */
+.grid1 img,
+.grid2 img {
+  box-shadow: var(--box-shadow);
+  border: var(--subtle-border);
 }
 
 /* CSS to vertically align h2 title of the products */
@@ -58,14 +57,13 @@ h2.vert::first-letter {
 }
 
 h2.vert::after {
-  content: '\A';
+  content: "\A";
   white-space: pre;
   display: block;
 }
 
 /* Media query for responsiveness on small screens */
 @media screen and (max-width: 767px) {
-  
   .grid1,
   .grid2 {
     grid-template-columns: 1fr; /* Set a single column for small screens */
