@@ -10,7 +10,8 @@
   grid-template-columns: 1fr 1fr 1fr; /* Added this line to define three columns */
   box-shadow: var(--box-shadow);
   margin: 2rem;
-  padding: 1rem;
+  padding: 1rem;  
+  background-color: white;
 }
 
 .main1,

@@ -116,6 +116,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start; /* Align to the left on desktop */  
+  gap: 1rem;
 }
 
 /* Style for each item in the basket list */
