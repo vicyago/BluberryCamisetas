@@ -103,7 +103,7 @@ function saveCustomization() {
         ${selectedOptions
           .map(
             (option) =>
-              `<li style="border: none;">${option.label} - <span style="color: #3f84c5; font-weight: bold;">${option.value}</li>`
+              `<li style="border: none;">${option.label} - <span style="color: #3f84c5; font-weight: bold;">${option.value},</li>`
           )
           .join("")}
       </ul>
@@ -150,27 +150,6 @@ function removeItem(button) {
 function hideBasket() {
   const basket = document.getElementById("basket");
   basket.style.display = "none";
-}
-
-// Function to clear customization options in the cart
-function clearCustomization() {
-  // Get the customization options container
-  const customizationOptionsContainer = document.getElementById(
-    "customization-options"
-  );
-
-  // Iterate over child elements and clear input values
-  for (const element of customizationOptionsContainer.children) {
-    if (
-      element.tagName === "DIV" &&
-      element.classList.contains("customization-option")
-    ) {
-      const input = element.querySelector("select, input");
-      if (input) {
-        input.value = "";
-      }
-    }
-  }
 }
 
 // Function to populate customization options based on the selected item
@@ -254,7 +233,7 @@ function populateCustomizationOptions(item) {
         ],
       },
       {
-        label: "Gola e Bolso",
+        label: "Design",
         values: [
           "Com Capuz",
           "Sem Capuz",
@@ -293,7 +272,7 @@ function populateCustomizationOptions(item) {
           "Cinza",
         ],
       },
-      { label: "Abertura Lateral", values: ["Fechado", "Elástico"] },
+      { label: "Lateral", values: ["Fechado", "Elástico"] },
       { label: "Tamanho", values: ["PP", "P", "M", "G", "GG"] },
       { label: "Quantidade", inputType: "number", name: "quantidadeabada" },
     ],
@@ -389,7 +368,7 @@ function createSelectInput(item, label, values) {
   const defaultOption = document.createElement("option");
   defaultOption.value = "";
   defaultOption.selected = true;
-  defaultOption.innerText = "▫️ Selecionar ▫️";
+  defaultOption.innerText = "";
   selectElement.appendChild(defaultOption);
 
   values.forEach((value) => {

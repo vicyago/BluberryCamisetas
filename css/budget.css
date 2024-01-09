@@ -7,11 +7,13 @@
   padding: 2rem;
   background-color: #fefefe;
   display: none;
-  width: 80%;
-  text-align: center;
+  width: 25%;
+  text-align: left;
   -webkit-box-shadow: 4px 4px 5px 0px rgba(94, 94, 94, 1);
   -moz-box-shadow: 4px 4px 5px 0px rgba(94, 94, 94, 1);
   box-shadow: 4px 4px 5px 0px rgba(94, 94, 94, 1);
+  border: 0.2rem solid #ccc; /* Add a subtle border for separation */
+  padding-left: 2vw;
 }
 
 /* Add a backdrop overlay style */
@@ -28,26 +30,26 @@
 /* Style for the customization options within the cart */
 #customization-options {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: left;
   padding: 0.5rem; /* Add padding for a bit of spacing */
-  gap: 0.7rem;
+  gap: 1rem;
 }
 
 /* Style for customization options labels */
 #customization-options label {
-  margin-bottom: 0.5rem;
+  margin: 0 0.5rem 0 0.5rem;
   font-weight: bold; /* Make labels bold for emphasis */
 }
 
 /* Style for customization options inputs and selects */
 #customization-options input,
 #customization-options select {
-  width: 100%;
+  width: auto;
+  max-width: 10vw;
   box-sizing: border-box;
-  padding: 0.25rem;
-  margin-bottom: 1rem;
-  text-align: center;
+  text-align: left;
+  justify-content: left;
   border: 0.2rem solid #ccc; /* Add a subtle border for separation */
 }
 
@@ -55,7 +57,6 @@
 .h5budget {
   color: #3f84c5;
   font-weight: bold;
-  margin-left: 50vw;
 }
 
 /* Style for the product list container */
@@ -66,6 +67,7 @@
   flex-wrap: wrap;
   width: 100%;
   gap: 1.6rem;
+  cursor: pointer;
 }
 
 /* Style for each product label within the product list */
@@ -138,13 +140,13 @@
 button {
   background-color: #3f84c5;
   color: #fff;
-  border: none;
+  border: 0.1rem solid #ccc; /* Add a subtle border for separation */
   padding: 0.25rem 0.5rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 1.4rem;
-  margin: 2rem 1rem;
+  margin: 1.4rem;
   cursor: pointer;
 }
 
@@ -199,7 +201,6 @@ button:hover {
 
 .comentarioHolder {
   line-height: 2rem;
-  margin-bottom: 5%;
   margin-top: 0;
   text-align: center;
 }
@@ -229,6 +230,7 @@ button:hover {
   font-size: 1.4rem;
   padding: 0.25rem 0.5rem;
   min-width: 15%;
+  cursor: pointer;
 }
 
 .inputDetalhes {
@@ -240,6 +242,7 @@ button:hover {
   cursor: pointer;
   font-size: 1rem;
   padding: 0.25rem 0.5rem;
+  min-width: 10vw;
 }
 
 /* Button Styles */
@@ -256,7 +259,7 @@ button:hover {
   justify-content: center;
   padding: 1%;
   text-align: center;
-  width: 30%;
+  width: 20%;
   margin: 0 auto; /* Add this line to center the button */
 }
 
@@ -279,13 +282,15 @@ button:hover {
     transform: translate(-50%, -50%);
     padding: 1rem;
     width: 85vw;
+    justify-content: center;
+    text-align: center;
   }
 
   /* Style for the customization options within the cart */
   #customization-options {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;    
     padding: 0.3rem; /* Add padding for a bit of spacing */
     gap: 0.5rem;
   }
@@ -300,7 +305,8 @@ button:hover {
   /* Style for customization options inputs and selects */
   #customization-options input,
   #customization-options select {
-    width: 100%;
+    width: 65vw;
+    min-width: 65vw;
     box-sizing: border-box;
     padding: 0.3rem;
     margin-bottom: 0.3rem;
@@ -321,7 +327,6 @@ button:hover {
     margin-top: 0.5rem;
     color: #3f84c5;
     font-weight: bold;
-    margin-left: 0vw;
   }
 
   /* Style for buttons */
