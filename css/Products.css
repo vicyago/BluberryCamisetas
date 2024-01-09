@@ -20,7 +20,7 @@
 .side2 {
   height: auto;
   display: flex;
-  padding: 0 1rem 3rem 1rem;
+  padding: 1rem 1rem 3rem 1rem;
 }
 
 .main1 {
@@ -29,14 +29,6 @@
 
 .side2 {
   grid-column: span 2;
-}
-
-/* CSS to set height and weight to the images on page */
-
-.grid1 img,
-.grid2 img {
-  box-shadow: var(--box-shadow);
-  border: var(--subtle-border);
 }
 
 /* CSS to vertically align h2 title of the products */
